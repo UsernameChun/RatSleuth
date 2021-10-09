@@ -39,6 +39,11 @@ public class HUDController : MonoBehaviour
      *  3: Inventory
      */
     private int p_ModeInt;
+    public int ModeInt {
+        get {
+            return p_ModeInt;
+        }
+    }
 
     private Button[] p_ButtonList;
     #endregion
