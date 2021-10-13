@@ -22,6 +22,22 @@ public class HUDController : MonoBehaviour
     [Tooltip("Inventory button.")]
     private Button m_InventoryButton;
 
+    // [SerializeField]
+    // [Tooltip("Move mode cursor.")]
+    // private Texture2D m_MoveCursor;
+
+    // [SerializeField]
+    // [Tooltip("Inspect mode cursor.")]
+    // private Texture2D m_InspectCursor;
+
+    // [SerializeField]
+    // [Tooltip("Interact mode cursor.")]
+    // private Texture2D m_InteractCursor;
+
+    // [SerializeField]
+    // [Tooltip("Default cursor.")]
+    // private Texture2D m_DefaultCursor;
+
     [SerializeField]
     [Tooltip("The color to highlight the active mode's button.")]
     private Color m_ModeSelectColor;
@@ -29,6 +45,8 @@ public class HUDController : MonoBehaviour
     // [SerializeField]
     // [Tooltip("The scale of the active mode's button.")]
     // private float m_ModeSelectScale;
+
+    
     #endregion
 
     #region Private Variables
