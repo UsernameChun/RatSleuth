@@ -22,6 +22,38 @@ public class HUDController : MonoBehaviour
     [Tooltip("Inventory button.")]
     private Button m_InventoryButton;
 
+    [SerializeField]
+    [Tooltip("Normal move icon.")]
+    private Sprite m_MoveIcon;
+
+    [SerializeField]
+    [Tooltip("Normal inspect icon.")]
+    private Sprite m_InspectIcon;
+
+    [SerializeField]
+    [Tooltip("Normal interact icon.")]
+    private Sprite m_InteractIcon;
+
+    [SerializeField]
+    [Tooltip("Normal inventory icon.")]
+    private Sprite m_InventoryIcon;
+
+    [SerializeField]
+    [Tooltip("Highlighted move icon.")]
+    private Sprite m_MoveHighlight;
+
+    [SerializeField]
+    [Tooltip("Highlighted inspect icon.")]
+    private Sprite m_InspectHighlight;
+
+    [SerializeField]
+    [Tooltip("Highlighted interact icon.")]
+    private Sprite m_InteractHighlight;
+
+    [SerializeField]
+    [Tooltip("Highlighted inventory icon.")]
+    private Sprite m_InventoryHighlight;
+
     // [SerializeField]
     // [Tooltip("Move mode cursor.")]
     // private Texture2D m_MoveCursor;
@@ -66,11 +98,24 @@ public class HUDController : MonoBehaviour
     private Button[] p_ButtonList;
     #endregion
 
+    #region Cached Components
+    private Image cc_MoveImage;
+    private Image cc_InspectImage;
+    private Image cc_InteractImage;
+    private Image cc_InventoryImage;
+    #endregion
+
     #region Initialization
     private void Awake() {
         p_ModeInt = 0;
         p_ButtonList = new Button[4]{m_MoveButton, m_InspectButton, m_InteractButton, m_InventoryButton};
-        ModeColor();
+
+        cc_MoveImage = m_MoveButton.GetComponent<Image>();
+        cc_InspectImage = m_InspectButton.GetComponent<Image>();
+        cc_InteractImage = m_InteractButton.GetComponent<Image>();
+        cc_InventoryImage = m_InventoryButton.GetComponent<Image>();
+
+        ModeButtonChange();
     }
     #endregion
 
@@ -97,16 +142,30 @@ public class HUDController : MonoBehaviour
         } else {
             return;
         }
-        ModeColor();
+        ModeButtonChange();
     }
 
-    private void ModeColor() {
-        for (int i = 0; i < 4; i++) {
-            if (i == p_ModeInt) {
-                p_ButtonList[i].GetComponent<Image>().color = m_ModeSelectColor;
-            } else {
-                p_ButtonList[i].GetComponent<Image>().color = new Color(1, 1, 1, 1);
-            }
+    private void ModeButtonChange() {
+        cc_MoveImage.sprite = m_MoveIcon;
+        cc_InspectImage.sprite = m_InspectIcon;
+        cc_InteractImage.sprite = m_InteractIcon;
+        cc_InventoryImage.sprite = m_InventoryIcon;
+        switch (p_ModeInt) {
+            case 0:
+                cc_MoveImage.sprite = m_MoveHighlight;
+                break;
+            case 1:
+                cc_InspectImage.sprite = m_InspectHighlight;
+                break;
+            case 2:
+                cc_InteractImage.sprite = m_InteractHighlight;
+                break;
+            case 3:
+                cc_InventoryImage.sprite = m_InventoryHighlight;
+                break;
+            default:
+                p_ModeInt = 0;
+                break;            
         }
     }
     #endregion

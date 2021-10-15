@@ -51,22 +51,31 @@ public class ItemController : MonoBehaviour
     private void Update() {
         if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))) {
             p_Index++;
+            Debug.Log("Incrementing");
         }
-        if (p_Index >= 0 && p_Index < m_Conversation.Length && p_HUDController.ModeInt == 1) {
+
+        if (p_Index >= 0 && p_Index < this.m_Conversation.Length && p_HUDController.ModeInt == 1) {
             p_Portrait.sprite = Liner(p_Index).portrait;
             p_Name.text = Liner(p_Index).name;
             p_Name.color = new Color(1, 1, 1, 1);
             p_Text.text = Liner(p_Index).text;
             p_Text.color = new Color(1, 1, 1, 1);
         } else if (p_HUDController.ModeInt != 1) {
-            m_DiaBox.SetActive(false);
             p_Index = -1;
-        } else if (p_Index >= m_Conversation.Length) {
+            m_DiaBox.SetActive(false);
+        } else if (p_Index >= this.m_Conversation.Length) {
             p_Index = -1;
             m_DiaBox.SetActive(false);
             if (p_ObjectName == this.gameObject.name) {
                 gameObject.SetActive(false);
             }
+        } else {
+            p_Index = -1;
+        }
+
+        if (IsTalking() == false) {
+            Debug.Log("heehee");
+            p_Index = -1;
         }
     }
     #endregion
