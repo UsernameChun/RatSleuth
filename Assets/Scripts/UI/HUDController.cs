@@ -145,6 +145,14 @@ public class HUDController : MonoBehaviour
         ModeButtonChange();
     }
 
+    public void SetMode(int i) {
+        if (i >= 0 && i <= 3) {
+            Debug.Log("mode changed to " + i);
+            p_ModeInt = i;
+        }
+        ModeButtonChange();
+    }
+
     private void ModeButtonChange() {
         cc_MoveImage.sprite = m_MoveIcon;
         cc_InspectImage.sprite = m_InspectIcon;
@@ -177,6 +185,10 @@ public class HUDController : MonoBehaviour
         } else {
             return false;
         }
+    }
+
+    public int GetMode() {
+        return p_ModeInt;
     }
     #endregion
 }

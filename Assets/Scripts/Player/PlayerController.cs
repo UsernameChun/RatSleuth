@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     [Tooltip("The HUD Controller.")]
     private GameObject m_HUD;
+
+    [SerializeField]
+    [Tooltip("Have we hit a wall")]
+    private bool wall = false;
     #endregion
 
     #region Cached References
@@ -27,13 +31,20 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region Update Methods
-    private void FixedUpdate() {
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
-        this.transform.position += movement * m_MoveSpeed * Time.fixedDeltaTime;
-        ScaleY();
-        if (m_HUD.GetComponent<HUDController>().IsMoveMode()) {
-            // do something
+    private void Update() {
+        Vector3 targetPosition;
+        if (Input.GetKeyDown(KeyCode.Mouse1)) {
+            targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            targetPosition.z = 0;
+            
+            if (m_HUD.GetComponent<HUDController>().GetMode() == 0) {
+                wall = false;
+                StartCoroutine(MoveTo(targetPosition));
+            }
         }
+
+       
+        
     }
     #endregion
 
@@ -41,6 +52,27 @@ public class PlayerController : MonoBehaviour
     private void ScaleY() {
         float scale = 1.0f - (0.25f * (transform.position.y + 2.0f));
         transform.localScale = new Vector3(scale * p_XScale, scale * p_YScale, 1);
+    }
+
+    IEnumerator MoveTo(Vector3 target) {
+        Rigidbody2D myBody = this.gameObject.GetComponent<Rigidbody2D>();
+        while ((target - this.gameObject.transform.position).magnitude > 0.1 && !wall) {
+            if (m_HUD.GetComponent<HUDController>().GetMode() != 0) {
+                myBody.velocity = Vector3.zero;
+            }
+            Vector3 vdir = (target - this.gameObject.transform.position).normalized;
+            myBody.velocity =vdir * m_MoveSpeed;
+            ScaleY();
+            yield return null;
+        }
+        this.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.tag == "Wall") {
+            wall = true;
+        }
     }
     #endregion
 }
