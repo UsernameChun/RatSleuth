@@ -74,7 +74,6 @@ public class ItemController : MonoBehaviour
         }
 
         if (IsTalking() == false) {
-            Debug.Log("heehee");
             p_Index = -1;
         }
     }
