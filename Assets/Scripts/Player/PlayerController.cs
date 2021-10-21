@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     [Tooltip("Have we hit a wall")]
     private bool wall = false;
+
+    private Coroutine moveCoroutine = null;
     #endregion
 
     #region Cached References
@@ -36,10 +38,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1)) {
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             targetPosition.z = 0;
-            
             if (m_HUD.GetComponent<HUDController>().GetMode() == 0) {
+                if (moveCoroutine != null) {
+                    StopCoroutine(moveCoroutine);
+                }
                 wall = false;
-                StartCoroutine(MoveTo(targetPosition));
+                moveCoroutine = StartCoroutine(MoveTo(targetPosition));
             }
         }
 
