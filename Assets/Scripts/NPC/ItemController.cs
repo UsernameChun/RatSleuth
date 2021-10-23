@@ -51,7 +51,6 @@ public class ItemController : MonoBehaviour
     private void Update() {
         if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))) {
             p_Index++;
-            Debug.Log("Incrementing");
         }
 
         if (p_Index >= 0 && p_Index < this.m_Conversation.Length && p_HUDController.ModeInt == 1) {

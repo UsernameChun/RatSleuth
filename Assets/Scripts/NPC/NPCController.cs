@@ -48,14 +48,19 @@ public class NPCController : MonoBehaviour
         if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))) {
             p_Index++;
         }
+        
         if (p_Index >= 0 && p_Index < m_Conversation.Length && p_HUDController.ModeInt == 2) {
             p_Portrait.sprite = Liner(p_Index).portrait;
             p_Name.text = Liner(p_Index).name;
             p_Name.color = new Color(1, 1, 1, 1);
             p_Text.text = Liner(p_Index).text;
             p_Text.color = new Color(1, 1, 1, 1);
-        } else if (p_Index >= m_Conversation.Length || p_HUDController.ModeInt != 2) {
+        } else if (p_Index >= this.m_Conversation.Length || p_HUDController.ModeInt != 2) {
             m_DiaBox.SetActive(false);
+            p_Index = -1;
+        }
+
+        if (IsTalking() == false) {
             p_Index = -1;
         }
     }
