@@ -13,15 +13,20 @@ public class CursorController : MonoBehaviour
     [Tooltip("Cursors")]
     public Texture2D walk;
     public Texture2D magnify;
+    public Texture2D magnify2;
     public Texture2D talk;
+    public Texture2D talk2;
     public Texture2D item;
     private bool stop;
+    private bool hover;
+    private bool isTalk;
     #endregion
 
     #region Methods
     private void Start() {
         Cursor.SetCursor(walk, Vector2.zero, CursorMode.ForceSoftware);
         stop = false;
+        hover = false;
     }
 
     private void Update() {
@@ -32,10 +37,16 @@ public class CursorController : MonoBehaviour
                     Cursor.SetCursor(walk, Vector2.zero, CursorMode.ForceSoftware);
                     break;
                 case 1:
-                    Cursor.SetCursor(magnify, Vector2.zero, CursorMode.ForceSoftware);
+                    if (hover && !isTalk)
+                        Cursor.SetCursor(magnify2, Vector2.zero, CursorMode.ForceSoftware);
+                    else
+                        Cursor.SetCursor(magnify, Vector2.zero, CursorMode.ForceSoftware);
                     break;
                 case 2:
-                    Cursor.SetCursor(talk, Vector2.zero, CursorMode.ForceSoftware);
+                    if (hover && isTalk)
+                        Cursor.SetCursor(talk2, Vector2.zero, CursorMode.ForceSoftware);
+                    else
+                        Cursor.SetCursor(talk, Vector2.zero, CursorMode.ForceSoftware);
                     break;
                 case 3:
                     Cursor.SetCursor(item, Vector2.zero, CursorMode.ForceSoftware);
@@ -47,6 +58,11 @@ public class CursorController : MonoBehaviour
             Cursor.SetCursor(null, Vector2.zero, CursorMode.ForceSoftware);
         }
 
+    }
+
+    public void changeHover(bool b, bool c) {
+        this.hover = b;
+        this.isTalk = c;
     }
     #endregion
 }
