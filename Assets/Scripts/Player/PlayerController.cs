@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     private bool wall = false;
 
     private Coroutine moveCoroutine = null;
+
+    public Animator animator;
     #endregion
 
     #region Cached References
@@ -34,16 +36,37 @@ public class PlayerController : MonoBehaviour
 
     #region Update Methods
     private void Update() {
+        if(this.gameObject.GetComponent<Rigidbody2D>().velocity == Vector2.zero) {
+            animator.SetBool("isMoving", false);
+            animator.SetBool("isPicking", false);
+            animator.SetBool("isTalking", false);
+        }
         Vector3 targetPosition;
         if (Input.GetKeyDown(KeyCode.Mouse1)) {
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             targetPosition.z = 0;
+            Debug.Log((targetPosition - this.gameObject.transform.position));
             if (m_HUD.GetComponent<HUDController>().GetMode() == 0) {
                 if (moveCoroutine != null) {
                     StopCoroutine(moveCoroutine);
                 }
                 wall = false;
+                
+                if ((targetPosition - this.gameObject.transform.position).x < 0) {
+                    Debug.Log("flip");
+                    var holder = this.gameObject.transform.localScale;
+                    holder.x = -1;
+                    this.gameObject.transform.localScale = holder;
+                }
+                else {
+                    var holder = this.gameObject.transform.localScale;
+                    holder.x = 1;
+                    this.gameObject.transform.localScale = holder;
+                }
                 moveCoroutine = StartCoroutine(MoveTo(targetPosition));
+                animator.SetBool("isMoving", true);
+                animator.SetBool("isPicking", false);
+                animator.SetBool("isTalking", false);
             }
         }
 
@@ -59,6 +82,7 @@ public class PlayerController : MonoBehaviour
     }
 
     IEnumerator MoveTo(Vector3 target) {
+        
         Rigidbody2D myBody = this.gameObject.GetComponent<Rigidbody2D>();
         while ((target - this.gameObject.transform.position).magnitude > 0.1 && !wall) {
             if (m_HUD.GetComponent<HUDController>().GetMode() != 0) {
