@@ -17,6 +17,8 @@ public class NPCController : MonoBehaviour
     [SerializeField]
     [Tooltip("A HUD Controller object to check modes.")]
     private GameObject m_HUD;
+
+    public Animator animator;
     #endregion
 
     #region Cached Components
@@ -62,6 +64,11 @@ public class NPCController : MonoBehaviour
 
         if (IsTalking() == false) {
             p_Index = -1;
+            animator.SetBool("isTalking", false);
+        }
+        else
+        {
+            animator.SetBool("isTalking", true);
         }
     }
     #endregion

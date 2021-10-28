@@ -783,7 +783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 30.3, y: -57.5}
+  m_AnchoredPosition: {x: 30.300049, y: -57.5}
   m_SizeDelta: {x: 65, y: 77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &290979817
@@ -951,6 +951,7 @@ MonoBehaviour:
     text: You found $???? worth of gold!
   m_DiaBox: {fileID: 1287479192}
   m_HUD: {fileID: 1306694429}
+  animator: {fileID: 673414230}
 --- !u!114 &315947734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1339,6 +1340,7 @@ MonoBehaviour:
     text: You received a piece of candy!
   m_DiaBox: {fileID: 200150879}
   m_HUD: {fileID: 1306694429}
+  animator: {fileID: 673414230}
 --- !u!114 &478696068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2766,6 +2768,7 @@ MonoBehaviour:
     text: Well I hope you're doing alright too.
   m_DiaBox: {fileID: 1675333394}
   m_HUD: {fileID: 1306694429}
+  animator: {fileID: 673414230}
 --- !u!114 &1490820344
 MonoBehaviour:
   m_ObjectHideFlags: 0

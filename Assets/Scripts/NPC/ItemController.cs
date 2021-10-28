@@ -17,6 +17,8 @@ public class ItemController : MonoBehaviour
     [SerializeField]
     [Tooltip("A HUD Controller object to check modes.")]
     private GameObject m_HUD;
+
+    public Animator animator;
     #endregion
 
     #region Cached Components
@@ -74,6 +76,11 @@ public class ItemController : MonoBehaviour
 
         if (IsTalking() == false) {
             p_Index = -1;
+            animator.SetBool("isPicking", false);
+        }
+        else
+        {
+            animator.SetBool("isPicking", true);
         }
     }
     #endregion

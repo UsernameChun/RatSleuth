@@ -39,8 +39,6 @@ public class PlayerController : MonoBehaviour
     private void Update() {
         if(this.gameObject.GetComponent<Rigidbody2D>().velocity == Vector2.zero) {
             animator.SetBool("isMoving", false);
-            animator.SetBool("isPicking", false);
-            animator.SetBool("isTalking", false);
         }
         Vector3 targetPosition;
         if (Input.GetKeyDown(KeyCode.Mouse1)) {
