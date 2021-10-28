@@ -6,24 +6,24 @@ using System.IO;
 public class Parser : MonoBehaviour
 {
     [System.Serializable]
-    private class SceneGroup {
+    private class Scene {
         public int id;
         public string name;
-        public string defaultScene;
-        public string[] scenes;
+
+        public string scene;
     }
     [System.Serializable]
-    private class JsonToSceneGroup {
+    private class JsonToScene {
         int[] signals; //signals
         public int[] Signals {
             get {
                 return signals;
             }
         }
-        SceneGroup[] next_SceneGroup; //next scene
-        public SceneGroup[] nextSceneGroup {
+        Scene next_Scene; //next scene
+        public Scene nextScene {
             get {
-                return next_SceneGroup;
+                return next_Scene;
             }
         }
     }
@@ -34,14 +34,10 @@ public class Parser : MonoBehaviour
         }
     }
     public string parse(int signal, string curScene, int Scene = -1) {
-        JsonToSceneGroup deserial = JsonUtility.FromJson<JsonToSceneGroup>(Application.dataPath + Path.PathSeparator + "SceneGroupTransitions" + Path.PathSeparator + curScene + ".json");
+        JsonToScene deserial = JsonUtility.FromJson<JsonToScene>(Application.dataPath + Path.PathSeparator + "SceneGroupTransitions" + Path.PathSeparator + curScene + ".json");
         for (int index = 0; index < deserial.Signals.Length; index += 1 ) {
             if (deserial.Signals[index] == signal) {
-                if (Scene == -1) {
-                    return deserial.nextSceneGroup[index].defaultScene;
-                } else {
-                    return deserial.nextSceneGroup[index].scenes[Scene];
-                }
+                return deserial.nextScene.scene;
             }
         }
         return null;
