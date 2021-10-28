@@ -92,7 +92,7 @@ public class ItemController : MonoBehaviour
     public void ChangeState() {
         m_DiaBox.SetActive(true);
         p_ObjectName = this.gameObject.name;
-        Inventory.add_to_inventory(this.gameObject.name);
+        Inventory.add_to_inventory(this.gameObject.name, 1);
     }
     #endregion
 
