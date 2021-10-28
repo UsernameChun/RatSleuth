@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private Coroutine moveCoroutine = null;
 
     public Animator animator;
+    public SpriteRenderer render;
     #endregion
 
     #region Cached References
@@ -45,7 +46,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1)) {
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             targetPosition.z = 0;
-            Debug.Log((targetPosition - this.gameObject.transform.position));
             if (m_HUD.GetComponent<HUDController>().GetMode() == 0) {
                 if (moveCoroutine != null) {
                     StopCoroutine(moveCoroutine);
@@ -54,14 +54,10 @@ public class PlayerController : MonoBehaviour
                 
                 if ((targetPosition - this.gameObject.transform.position).x < 0) {
                     Debug.Log("flip");
-                    var holder = this.gameObject.transform.localScale;
-                    holder.x = -1;
-                    this.gameObject.transform.localScale = holder;
+                    render.flipX = true;
                 }
                 else {
-                    var holder = this.gameObject.transform.localScale;
-                    holder.x = 1;
-                    this.gameObject.transform.localScale = holder;
+                    render.flipX = false;
                 }
                 moveCoroutine = StartCoroutine(MoveTo(targetPosition));
                 animator.SetBool("isMoving", true);
@@ -84,7 +80,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator MoveTo(Vector3 target) {
         
         Rigidbody2D myBody = this.gameObject.GetComponent<Rigidbody2D>();
-        while ((target - this.gameObject.transform.position).magnitude > 0.1 && !wall) {
+        while ((target - this.gameObject.transform.position).magnitude > 0.2 && !wall) {
             if (m_HUD.GetComponent<HUDController>().GetMode() != 0) {
                 myBody.velocity = Vector3.zero;
             }
