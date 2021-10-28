@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine;
 
-public class NPCController : MonoBehaviour
+public class Inspectable : MonoBehaviour
 {
     #region Editor Variables
     [SerializeField]
@@ -19,6 +19,7 @@ public class NPCController : MonoBehaviour
     private GameObject m_HUD;
 
     public Animator animator;
+    public int[] breakpoints;
     #endregion
 
     #region Cached Components  
@@ -31,6 +32,8 @@ public class NPCController : MonoBehaviour
 
     #region Private Variables
     private int p_Index;
+    private int currBase;
+    private int currLmt;
     #endregion
 
     #region Initialization
@@ -42,6 +45,8 @@ public class NPCController : MonoBehaviour
         p_Index = -1;
 
         p_HUDController = m_HUD.GetComponent<HUDController>();
+        currLmt = 0;
+        currBase = 0;
     }
     #endregion
 
@@ -50,24 +55,28 @@ public class NPCController : MonoBehaviour
         if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))) {
             p_Index++;
         }
-        
-        if (p_Index >= 0 && p_Index < m_Conversation.Length && p_HUDController.ModeInt == 2) {
-            p_Portrait.sprite = Liner(p_Index).portrait;
-            p_Name.text = Liner(p_Index).name;
-            p_Name.color = new Color(1, 1, 1, 1);
-            p_Text.text = Liner(p_Index).text;
-            p_Text.color = new Color(1, 1, 1, 1);
-        } else if (p_Index >= this.m_Conversation.Length || p_HUDController.ModeInt != 2) {
-            m_DiaBox.SetActive(false);
-            p_Index = -1;
+        Debug.Log(p_Index + " " + currLmt);
+
+        if (IsTalking() && p_HUDController.ModeInt == 2) {
+            if (p_Index <= breakpoints[currLmt]) {
+                p_Portrait.sprite = Liner(p_Index).portrait;
+                p_Name.text = Liner(p_Index).name;
+                p_Name.color = new Color(1, 1, 1, 1);
+                p_Text.text = Liner(p_Index).text;
+                p_Text.color = new Color(1, 1, 1, 1);
+            }
+            else {
+                m_DiaBox.SetActive(false);
+                if(currLmt < this.breakpoints.Length) {
+                    currLmt++;
+                }
+            }
         }
 
         if (IsTalking() == false) {
-            p_Index = -1;
             animator.SetBool("isTalking", false);
         }
-        else
-        {
+        else {
             animator.SetBool("isTalking", true);
         }
     }
@@ -90,7 +99,8 @@ public class NPCController : MonoBehaviour
     #endregion
 
     [System.Serializable]
-    private class Convo {
+    private class Convo
+    {
         [SerializeField]
         public Sprite portrait;
 

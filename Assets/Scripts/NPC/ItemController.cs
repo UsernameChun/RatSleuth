@@ -40,7 +40,6 @@ public class ItemController : MonoBehaviour
         p_Portrait = m_DiaBox.transform.GetChild(0).gameObject.GetComponent<Image>();
         p_Name = m_DiaBox.transform.GetChild(1).gameObject.GetComponent<Text>();
         p_Text = m_DiaBox.transform.GetChild(2).gameObject.GetComponent<Text>();
-
         p_Index = -1;
 
         p_HUDController = m_HUD.GetComponent<HUDController>();
