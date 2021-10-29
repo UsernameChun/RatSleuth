@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class Inspectable : MonoBehaviour
+public class Talkable : MonoBehaviour
 {
     #region Editor Variables
     [SerializeField]
@@ -46,23 +46,23 @@ public class Inspectable : MonoBehaviour
         p_Name = m_DiaBox.transform.GetChild(1).gameObject.GetComponent<Text>();
         p_Text = m_DiaBox.transform.GetChild(2).gameObject.GetComponent<Text>();
 
-        p_Index = -1;
+        p_Index = 0;
 
         p_HUDController = m_HUD.GetComponent<HUDController>();
         currLmt = 0;
-        loopBase = breakpoints[breakpoints.Length-1]+1;
+        loopBase = breakpoints[breakpoints.Length - 1] + 1;
         reset = 0;
     }
     #endregion
 
     #region Update Methods
     private void Update() {
-        Debug.Log(p_Index);
         if ((Input.GetMouseButtonDown(0) && IsTalking())) {
+            needToTurnOff = true;
             p_Index++;
         }
 
-        if (IsTalking() && p_HUDController.ModeInt == 1) {
+        if (IsTalking() && p_HUDController.ModeInt == 2) {
             if (currLmt < breakpoints.Length) {
                 if (p_Index <= breakpoints[currLmt]) {
                     p_Portrait.sprite = Liner(p_Index).portrait;
@@ -71,24 +71,22 @@ public class Inspectable : MonoBehaviour
                     p_Text.text = Liner(p_Index).text;
                     p_Text.color = new Color(1, 1, 1, 1);
 
-                    for (int i = 0; i<checkpoints.Length; i++) {
-                        if(checkpoints[i] == p_Index) {
+                    for (int i = 0; i < checkpoints.Length; i++) {
+                        if (checkpoints[i] == p_Index) {
                             plt.passCheckpoint(i);
                             Debug.Log("Checkpoint passed");
                         }
                     }
                 }
                 else {
-                    needToTurnOff = true;
                     reset = p_Index - 1;
-                    p_Index = reset;
                     m_DiaBox.SetActive(false);
                     currLmt++;
                 }
             }
             else {
                 //begin end looping
-                if (p_Index >= 0 && p_Index < m_Conversation.Length && p_HUDController.ModeInt == 1) {
+                if (p_Index >= 0 && p_Index < m_Conversation.Length && p_HUDController.ModeInt == 2) {
                     p_Portrait.sprite = Liner(p_Index).portrait;
                     p_Name.text = Liner(p_Index).name;
                     p_Name.color = new Color(1, 1, 1, 1);
@@ -114,11 +112,8 @@ public class Inspectable : MonoBehaviour
     }
 
     public void restartConvo() {
-        if(p_Index > reset + 1) {
-            p_Index = reset;
-        }
+        p_Index = reset;
         if (needToTurnOff) {
-            Debug.Log("Turning it off");
             m_DiaBox.SetActive(false);
             needToTurnOff = false;
         }
@@ -139,10 +134,6 @@ public class Inspectable : MonoBehaviour
 
     public void ChangeState() {
         m_DiaBox.SetActive(true);
-    }
-
-    public void OnMouseDown() {
-        ChangeState();
     }
     #endregion
 
