@@ -63,9 +63,19 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("isTalking", false);
             }
         }
-
-       
-        
+        if (m_HUD.GetComponent<HUDController>().GetMode() == 0) {
+            Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+            this.transform.position += movement * m_MoveSpeed * Time.fixedDeltaTime;
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) {
+                animator.SetBool("isMoving", true);
+            }
+            if (Input.GetKeyDown(KeyCode.A)) {
+                render.flipX = true;
+            } else if (Input.GetKeyDown(KeyCode.D)) {
+                render.flipX = false;
+            }
+            ScaleY();
+        }
     }
     #endregion
 
