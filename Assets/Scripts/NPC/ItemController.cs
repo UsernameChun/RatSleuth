@@ -19,6 +19,10 @@ public class ItemController : MonoBehaviour
     private GameObject m_HUD;
 
     public Animator animator;
+
+    [SerializeField]
+    [Tooltip("Whether or not to deactivate this object after its conversation.")]
+    private bool m_Deactivate;
     #endregion
 
     #region Cached Components
@@ -66,7 +70,7 @@ public class ItemController : MonoBehaviour
         } else if (p_Index >= this.m_Conversation.Length) {
             p_Index = -1;
             m_DiaBox.SetActive(false);
-            if (p_ObjectName == this.gameObject.name) {
+            if (p_ObjectName == this.gameObject.name && m_Deactivate) {
                 gameObject.SetActive(false);
             }
         } else {
