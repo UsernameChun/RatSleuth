@@ -54,12 +54,14 @@ public class NPCController : MonoBehaviour
             mode = 1;
         }
     }
-    #endregion
 
-    #region Update Methods
     private void Awake() {
         init();
     }
+    #endregion
+
+    #region Update Methods
+
 
     private void OnMouseDown() {
         if (!IsTalking() && p_HUDController.ModeInt == mode) {
@@ -107,6 +109,15 @@ public class NPCController : MonoBehaviour
     private Convo Liner(int i) {
         return m_Conversation[i];
     }
+
+    public void skipMe() {
+        if(chain != null) {
+            chain.Phase();
+        }
+        else {
+            Debug.Log("Nothing to skip to");
+        }
+    }
     #endregion
 
     #region Check Methods
@@ -115,7 +126,6 @@ public class NPCController : MonoBehaviour
     }
 
     public void ChangeState(bool b) {
-        Debug.Log("Activating");
         m_DiaBox.SetActive(b);
     }
     #endregion
