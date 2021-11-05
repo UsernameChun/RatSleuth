@@ -39,6 +39,7 @@ public class NPCController : MonoBehaviour
 
     #region Initialization
     private void init() {
+
         p_Portrait = m_DiaBox.transform.GetChild(0).gameObject.GetComponent<Image>();
         p_Name = m_DiaBox.transform.GetChild(1).gameObject.GetComponent<Text>();
         p_Text = m_DiaBox.transform.GetChild(2).gameObject.GetComponent<Text>();
@@ -99,7 +100,7 @@ public class NPCController : MonoBehaviour
             p_Index = -1;
             animator.SetBool("isTalking", false);
         }
-        else {
+        else if (mode == 2) {
             animator.SetBool("isTalking", true);
         }
     }

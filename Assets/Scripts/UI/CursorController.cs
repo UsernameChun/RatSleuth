@@ -37,13 +37,13 @@ public class CursorController : MonoBehaviour
                     Cursor.SetCursor(walk, Vector2.zero, CursorMode.ForceSoftware);
                     break;
                 case 1:
-                    if (hover && !isTalk)
+                    if (hover)
                         Cursor.SetCursor(magnify2, Vector2.zero, CursorMode.ForceSoftware);
                     else
                         Cursor.SetCursor(magnify, Vector2.zero, CursorMode.ForceSoftware);
                     break;
                 case 2:
-                    if (hover && isTalk)
+                    if (hover)
                         Cursor.SetCursor(talk2, Vector2.zero, CursorMode.ForceSoftware);
                     else
                         Cursor.SetCursor(talk, Vector2.zero, CursorMode.ForceSoftware);
@@ -60,9 +60,8 @@ public class CursorController : MonoBehaviour
 
     }
 
-    public void changeHover(bool b, bool c) {
+    public void changeHover(bool b) {
         this.hover = b;
-        this.isTalk = c;
     }
     #endregion
 }
