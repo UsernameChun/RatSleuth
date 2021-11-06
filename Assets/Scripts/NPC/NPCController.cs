@@ -22,6 +22,7 @@ public class NPCController : MonoBehaviour
     public ChainBuilder chain;
     public Checkpoint ckpt;
     public bool talkable;
+    public GameObject[] force;
     #endregion
 
     #region Cached Components  
@@ -67,7 +68,6 @@ public class NPCController : MonoBehaviour
     #region Update Methods
     private void OnMouseDown() {
 
-
         if (!IsTalking() && p_HUDController.ModeInt == mode) {
             init();
             this.GetComponent<BoxCollider2D>().transform.localScale = new Vector3(5000f, 5000f, 0);
@@ -107,7 +107,6 @@ public class NPCController : MonoBehaviour
             m_DiaBox.SetActive(false);
             p_Index = -1;
             animator.SetBool("isTalking", false);
-
             Debug.Log("Reactivating buttons");
             foreach (var b in x)
             {
@@ -140,6 +139,33 @@ public class NPCController : MonoBehaviour
         }
         else {
             Debug.Log("Nothing to skip to");
+        }
+    }
+
+    public void shrinkMe() {
+        this.GetComponent<BoxCollider2D>().transform.localScale = ls;
+    }
+
+    public void forceProgression() {
+          
+        init();
+        this.GetComponent<BoxCollider2D>().transform.localScale = new Vector3(5000f, 5000f, 0);
+        ChangeState(true);
+        x = GameObject.FindGameObjectsWithTag("Button");
+        foreach (var b in x) {
+            b.SetActive(false);
+        }
+        p_Index++;
+        p_Portrait.sprite = Liner(p_Index).portrait;
+        p_Name.text = Liner(p_Index).name;
+        p_Name.color = new Color(0, 0, 0, 1);
+        p_Text.text = Liner(p_Index).text;
+        p_Text.color = new Color(0, 0, 0, 1);
+        if (IsTalking() == false) {
+            p_Index = -1;
+        }
+        else if (mode == 2) {
+            animator.SetBool("isTalking", true);
         }
     }
     #endregion
