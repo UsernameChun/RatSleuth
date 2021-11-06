@@ -54,6 +54,8 @@ public class HUDController : MonoBehaviour
     [Tooltip("Highlighted inventory icon.")]
     private Sprite m_InventoryHighlight;
 
+    public GameObject inv;
+
     // [SerializeField]
     // [Tooltip("Move mode cursor.")]
     // private Texture2D m_MoveCursor;
@@ -169,6 +171,10 @@ public class HUDController : MonoBehaviour
                 cc_InteractImage.sprite = m_InteractHighlight;
                 break;
             case 3:
+                if (inv != null)
+                {
+                    inv.SetActive(true);
+                }
                 cc_InventoryImage.sprite = m_InventoryHighlight;
                 break;
             default:

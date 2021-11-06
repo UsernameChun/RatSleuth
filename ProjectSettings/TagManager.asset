@@ -8,6 +8,7 @@ TagManager:
   - Checkpoint0
   - TalkBox
   - InspectBox
+  - Inventory
   layers:
   - Default
   - TransparentFX
