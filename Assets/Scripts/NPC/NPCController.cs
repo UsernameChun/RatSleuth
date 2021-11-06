@@ -36,6 +36,7 @@ public class NPCController : MonoBehaviour
     private int p_Index;
     private int mode;
     Vector3 ls = new Vector3(0f, 0f, 0f);
+    GameObject[] x = null;
     #endregion
 
     #region Initialization
@@ -66,11 +67,20 @@ public class NPCController : MonoBehaviour
     #region Update Methods
     private void OnMouseDown() {
 
+
         if (!IsTalking() && p_HUDController.ModeInt == mode) {
             init();
             this.GetComponent<BoxCollider2D>().transform.localScale = new Vector3(5000f, 5000f, 0);
             ChangeState(true);
+            x = GameObject.FindGameObjectsWithTag("Button");
+            foreach (var b in x)
+            {
+                b.SetActive(false);
+            }
         }
+
+        
+        
 
         if (p_HUDController.ModeInt == mode) {
             p_Index++;
@@ -97,13 +107,19 @@ public class NPCController : MonoBehaviour
             m_DiaBox.SetActive(false);
             p_Index = -1;
             animator.SetBool("isTalking", false);
+
+            Debug.Log("Reactivating buttons");
+            foreach (var b in x)
+            {
+                b.SetActive(true);
+            }
         }
         else if (p_HUDController.ModeInt != mode)
         {
             m_DiaBox.SetActive(false);
             p_Index = -1;
+
         }
-        
         if (IsTalking() == false) {
             p_Index = -1;
         }
