@@ -12,10 +12,16 @@ public class Inventory : MonoBehaviour
         public Dictionary<string, int> itemList;
     }
     public static void add_to_inventory(string item, int amount) {
-        FileStream fp = new FileStream(Application.dataPath + Path.PathSeparator + "inventory.json", FileMode.OpenOrCreate);
         BinaryFormatter bf = new BinaryFormatter();
-        InventorySerialObject deserial = (InventorySerialObject) bf.Deserialize(fp);
-        Dictionary<string, int> items = deserial.itemList;
+        InventorySerialObject deserial = null;
+        Dictionary<string, int> items = null;
+        FileStream fp = new FileStream(Application.dataPath + "/inventory", FileMode.OpenOrCreate);
+        if (File.Exists(Application.dataPath + "/inventory") && fp.Length > 0) {
+            deserial = (InventorySerialObject) bf.Deserialize(fp);
+            items = deserial.itemList;
+        } else {
+            items = new Dictionary<string, int>();
+        }
         if (!items.ContainsKey(item)) {
             items.Add(item, amount);
         } else {
@@ -27,14 +33,19 @@ public class Inventory : MonoBehaviour
 
     /* removes "amount" items with name "item" from the inventory, assumes that player  */
     public static void remove_from_inventory(string item, int amount) {
-        FileStream fp = new FileStream(Application.dataPath + Path.PathSeparator + "inventory.json", FileMode.OpenOrCreate);
+        FileStream fp = new FileStream(Application.dataPath + "/inventory.json", FileMode.OpenOrCreate);
         BinaryFormatter bf = new BinaryFormatter();
-        InventorySerialObject deserial = (InventorySerialObject) bf.Deserialize(fp);
-        Dictionary<string, int> items = deserial.itemList;
-        if (items.ContainsKey(item) && items[item] > amount) {
-            items[item] -= amount;
-        } 
-        bf.Serialize(fp, items);
+        if (fp.Length <= 0) { //empty inventory
+            fp.Close();
+            return;
+        } else {
+            InventorySerialObject deserial = (InventorySerialObject) bf.Deserialize(fp);
+            Dictionary<string, int> items = deserial.itemList;
+            if (items.ContainsKey(item) && items[item] > amount) {
+                items[item] -= amount;
+            } 
+            bf.Serialize(fp, items);
+        }
         fp.Close();
     }
 

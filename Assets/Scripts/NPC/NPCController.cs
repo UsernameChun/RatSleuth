@@ -128,6 +128,7 @@ public class NPCController : MonoBehaviour
 
     public void ChangeState(bool b) {
         m_DiaBox.SetActive(b);
+        Inventory.add_to_inventory(this.gameObject.name, 1);
     }
     #endregion
 
