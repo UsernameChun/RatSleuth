@@ -35,6 +35,7 @@ public class NPCController : MonoBehaviour
     #region Private Variables
     private int p_Index;
     private int mode;
+    Vector3 ls = new Vector3(0f, 0f, 0f);
     #endregion
 
     #region Initialization
@@ -54,6 +55,7 @@ public class NPCController : MonoBehaviour
         else {
             mode = 1;
         }
+        ls = this.GetComponent<BoxCollider2D>().transform.localScale;
     }
 
     private void Awake() {
@@ -62,43 +64,48 @@ public class NPCController : MonoBehaviour
     #endregion
 
     #region Update Methods
-
-
     private void OnMouseDown() {
+
         if (!IsTalking() && p_HUDController.ModeInt == mode) {
             init();
+            this.GetComponent<BoxCollider2D>().transform.localScale = new Vector3(5000f, 5000f, 0);
             ChangeState(true);
         }
 
         if (p_HUDController.ModeInt == mode) {
             p_Index++;
         }
-        if (p_Index >= 0 && p_Index < m_Conversation.Length && p_HUDController.ModeInt == mode) {
+        if (p_Index >= 0 && p_Index < m_Conversation.Length && p_HUDController.ModeInt == mode)
+        {
             p_Portrait.sprite = Liner(p_Index).portrait;
             p_Name.text = Liner(p_Index).name;
             p_Name.color = new Color(0, 0, 0, 1);
             p_Text.text = Liner(p_Index).text;
             p_Text.color = new Color(0, 0, 0, 1);
         }
-        else if (p_Index >= this.m_Conversation.Length) {
-            if (chain != null) {
+        else if (p_Index >= this.m_Conversation.Length)
+        {
+            if (chain != null)
+            {
                 chain.Phase();
             }
-            if (ckpt != null) {
+            if (ckpt != null)
+            {
                 ckpt.passCheckpoint();
             }
-
+            this.GetComponent<BoxCollider2D>().transform.localScale = ls;
             m_DiaBox.SetActive(false);
-            p_Index = -1;
-        }
-        else if (p_HUDController.ModeInt != mode) {
-            m_DiaBox.SetActive(false);
-            p_Index = -1;
-        }
-
-        if (IsTalking() == false) {
             p_Index = -1;
             animator.SetBool("isTalking", false);
+        }
+        else if (p_HUDController.ModeInt != mode)
+        {
+            m_DiaBox.SetActive(false);
+            p_Index = -1;
+        }
+        
+        if (IsTalking() == false) {
+            p_Index = -1;
         }
         else if (mode == 2) {
             animator.SetBool("isTalking", true);
