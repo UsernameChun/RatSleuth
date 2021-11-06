@@ -61,9 +61,9 @@ public class ItemController : MonoBehaviour
         if (p_Index >= 0 && p_Index < this.m_Conversation.Length && p_HUDController.ModeInt == 1) {
             p_Portrait.sprite = Liner(p_Index).portrait;
             p_Name.text = Liner(p_Index).name;
-            p_Name.color = new Color(1, 1, 1, 1);
+            p_Name.color = new Color(0, 0, 0, 1);
             p_Text.text = Liner(p_Index).text;
-            p_Text.color = new Color(1, 1, 1, 1);
+            p_Text.color = new Color(0, 0, 0, 1);
         } else if (p_HUDController.ModeInt != 1) {
             p_Index = -1;
             m_DiaBox.SetActive(false);
