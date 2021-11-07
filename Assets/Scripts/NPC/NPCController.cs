@@ -72,15 +72,9 @@ public class NPCController : MonoBehaviour
             init();
             this.GetComponent<BoxCollider2D>().transform.localScale = new Vector3(5000f, 5000f, 0);
             ChangeState(true);
-            x = GameObject.FindGameObjectsWithTag("Button");
-            foreach (var b in x)
-            {
-                b.SetActive(false);
-            }
+            Debug.Log("Disabling buttons" + this.gameObject.name);
+            m_HUD.GetComponent<HUDController>().disableButtons();
         }
-
-        
-        
 
         if (p_HUDController.ModeInt == mode) {
             p_Index++;
@@ -95,23 +89,21 @@ public class NPCController : MonoBehaviour
         }
         else if (p_Index >= this.m_Conversation.Length)
         {
-            if (chain != null)
-            {
-                chain.Phase();
-            }
-            if (ckpt != null)
-            {
-                ckpt.passCheckpoint();
-            }
+            m_HUD.GetComponent<HUDController>().enableButtons();
+
             this.GetComponent<BoxCollider2D>().transform.localScale = ls;
             m_DiaBox.SetActive(false);
             p_Index = -1;
             animator.SetBool("isTalking", false);
-            Debug.Log("Reactivating buttons");
-            foreach (var b in x)
-            {
-                b.SetActive(true);
+            Debug.Log("Reactivating buttons" + this.gameObject.name);
+
+            if (ckpt != null) {
+                ckpt.passCheckpoint();
             }
+            if (chain != null) {
+                chain.Phase();
+            }
+
         }
         else if (p_HUDController.ModeInt != mode)
         {
@@ -151,20 +143,14 @@ public class NPCController : MonoBehaviour
         init();
         this.GetComponent<BoxCollider2D>().transform.localScale = new Vector3(5000f, 5000f, 0);
         ChangeState(true);
-        x = GameObject.FindGameObjectsWithTag("Button");
-        foreach (var b in x) {
-            b.SetActive(false);
-        }
+        m_HUD.GetComponent<HUDController>().disableButtons();
         p_Index++;
         p_Portrait.sprite = Liner(p_Index).portrait;
         p_Name.text = Liner(p_Index).name;
         p_Name.color = new Color(0, 0, 0, 1);
         p_Text.text = Liner(p_Index).text;
         p_Text.color = new Color(0, 0, 0, 1);
-        if (IsTalking() == false) {
-            p_Index = -1;
-        }
-        else if (mode == 2) {
+        if (mode == 2) {
             animator.SetBool("isTalking", true);
         }
     }

@@ -98,6 +98,8 @@ public class HUDController : MonoBehaviour
     }
 
     private Button[] p_ButtonList;
+
+    private GameObject[] buttons;
     #endregion
 
     #region Cached Components
@@ -111,6 +113,8 @@ public class HUDController : MonoBehaviour
     private void Awake() {
         p_ModeInt = 0;
         p_ButtonList = new Button[4]{m_MoveButton, m_InspectButton, m_InteractButton, m_InventoryButton};
+
+        buttons = GameObject.FindGameObjectsWithTag("Button");
 
         cc_MoveImage = m_MoveButton.GetComponent<Image>();
         cc_InspectImage = m_InspectButton.GetComponent<Image>();
@@ -195,6 +199,18 @@ public class HUDController : MonoBehaviour
 
     public int GetMode() {
         return p_ModeInt;
+    }
+
+    public void disableButtons() {
+        foreach(var b in buttons) {
+            b.SetActive(false);
+        }
+    }
+
+    public void enableButtons() {
+        foreach (var b in buttons) {
+            b.SetActive(true);
+        }
     }
     #endregion
 }
