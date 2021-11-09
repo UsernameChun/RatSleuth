@@ -23,6 +23,10 @@ public class NPCController : MonoBehaviour
     public Checkpoint ckpt;
     public bool talkable;
     public GameObject[] force;
+
+    [SerializeField]
+    [Tooltip("Whether or not the item is something that can be picked up.")]
+    private bool m_IsItem;
     #endregion
 
     #region Cached Components  
@@ -36,6 +40,7 @@ public class NPCController : MonoBehaviour
     #region Private Variables
     private int p_Index;
     private int mode;
+    private string p_ObjectName;
     Vector3 ls = new Vector3(0f, 0f, 0f);
     GameObject[] x = null;
     #endregion
@@ -96,7 +101,9 @@ public class NPCController : MonoBehaviour
             p_Index = -1;
             animator.SetBool("isTalking", false);
             Debug.Log("Reactivating buttons" + this.gameObject.name);
-
+            if (p_ObjectName == this.gameObject.name && m_IsItem) {
+                gameObject.SetActive(false);
+            }
             if (ckpt != null) {
                 ckpt.passCheckpoint();
             }
@@ -163,6 +170,10 @@ public class NPCController : MonoBehaviour
 
     public void ChangeState(bool b) {
         m_DiaBox.SetActive(b);
+        p_ObjectName = this.gameObject.name;
+        if (m_IsItem) {
+            Inventory.add_to_inventory(this.gameObject.name, 1);
+        }
     }
     #endregion
 
