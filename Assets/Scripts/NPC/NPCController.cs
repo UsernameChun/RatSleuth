@@ -22,6 +22,11 @@ public class NPCController : MonoBehaviour
     public ChainBuilder chain;
     public Checkpoint ckpt;
     public bool talkable;
+    public GameObject[] force;
+
+    [SerializeField]
+    [Tooltip("Whether or not the item is something that can be picked up.")]
+    private bool m_IsItem;
     #endregion
 
     #region Cached Components  
@@ -35,6 +40,9 @@ public class NPCController : MonoBehaviour
     #region Private Variables
     private int p_Index;
     private int mode;
+    private string p_ObjectName;
+    Vector3 ls = new Vector3(0f, 0f, 0f);
+    GameObject[] x = null;
     #endregion
 
     #region Initialization
@@ -54,6 +62,7 @@ public class NPCController : MonoBehaviour
         else {
             mode = 1;
         }
+        ls = this.GetComponent<BoxCollider2D>().transform.localScale;
     }
 
     private void Awake() {
@@ -62,43 +71,55 @@ public class NPCController : MonoBehaviour
     #endregion
 
     #region Update Methods
-
-
     private void OnMouseDown() {
+
         if (!IsTalking() && p_HUDController.ModeInt == mode) {
             init();
+            this.GetComponent<BoxCollider2D>().transform.localScale = new Vector3(5000f, 5000f, 0);
             ChangeState(true);
+            Debug.Log("Disabling buttons" + this.gameObject.name);
+            m_HUD.GetComponent<HUDController>().disableButtons();
         }
 
         if (p_HUDController.ModeInt == mode) {
             p_Index++;
         }
-        if (p_Index >= 0 && p_Index < m_Conversation.Length && p_HUDController.ModeInt == mode) {
+        if (p_Index >= 0 && p_Index < m_Conversation.Length && p_HUDController.ModeInt == mode)
+        {
             p_Portrait.sprite = Liner(p_Index).portrait;
             p_Name.text = Liner(p_Index).name;
             p_Name.color = new Color(0, 0, 0, 1);
             p_Text.text = Liner(p_Index).text;
             p_Text.color = new Color(0, 0, 0, 1);
         }
-        else if (p_Index >= this.m_Conversation.Length) {
-            if (chain != null) {
-                chain.Phase();
+        else if (p_Index >= this.m_Conversation.Length)
+        {
+            m_HUD.GetComponent<HUDController>().enableButtons();
+
+            this.GetComponent<BoxCollider2D>().transform.localScale = ls;
+            m_DiaBox.SetActive(false);
+            p_Index = -1;
+            animator.SetBool("isTalking", false);
+            Debug.Log("Reactivating buttons" + this.gameObject.name);
+            if (p_ObjectName == this.gameObject.name && m_IsItem) {
+                gameObject.SetActive(false);
             }
             if (ckpt != null) {
                 ckpt.passCheckpoint();
             }
+            if (chain != null) {
+                chain.Phase();
+            }
 
+        }
+        else if (p_HUDController.ModeInt != mode)
+        {
             m_DiaBox.SetActive(false);
             p_Index = -1;
-        }
-        else if (p_HUDController.ModeInt != mode) {
-            m_DiaBox.SetActive(false);
-            p_Index = -1;
-        }
 
+        }
         if (IsTalking() == false) {
             p_Index = -1;
-            animator.SetBool("isTalking", false);
         }
         else if (mode == 2) {
             animator.SetBool("isTalking", true);
@@ -119,6 +140,27 @@ public class NPCController : MonoBehaviour
             Debug.Log("Nothing to skip to");
         }
     }
+
+    public void shrinkMe() {
+        this.GetComponent<BoxCollider2D>().transform.localScale = ls;
+    }
+
+    public void forceProgression() {
+          
+        init();
+        this.GetComponent<BoxCollider2D>().transform.localScale = new Vector3(5000f, 5000f, 0);
+        ChangeState(true);
+        m_HUD.GetComponent<HUDController>().disableButtons();
+        p_Index++;
+        p_Portrait.sprite = Liner(p_Index).portrait;
+        p_Name.text = Liner(p_Index).name;
+        p_Name.color = new Color(0, 0, 0, 1);
+        p_Text.text = Liner(p_Index).text;
+        p_Text.color = new Color(0, 0, 0, 1);
+        if (mode == 2) {
+            animator.SetBool("isTalking", true);
+        }
+    }
     #endregion
 
     #region Check Methods
@@ -128,7 +170,11 @@ public class NPCController : MonoBehaviour
 
     public void ChangeState(bool b) {
         m_DiaBox.SetActive(b);
-        Inventory.add_to_inventory(this.gameObject.name, 1);
+        p_ObjectName = this.gameObject.name;
+        if (m_IsItem) {
+            Inventory.add_to_inventory(this.gameObject.name, 1);
+        }
+
     }
     #endregion
 

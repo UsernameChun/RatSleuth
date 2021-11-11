@@ -80,7 +80,13 @@ public class HUDController : MonoBehaviour
     // [Tooltip("The scale of the active mode's button.")]
     // private float m_ModeSelectScale;
 
-    
+    [SerializeField]
+    [Tooltip("Whether or not the mode can be changed. Useful for puzzles.")]
+    private bool m_CanChange;
+
+    [SerializeField]
+    [Tooltip("The default mode int in case of puzzles. Defaults to 0.")]
+    private int m_DefaultMode;
     #endregion
 
     #region Private Variables
@@ -98,6 +104,8 @@ public class HUDController : MonoBehaviour
     }
 
     private Button[] p_ButtonList;
+
+    private GameObject[] buttons;
     #endregion
 
     #region Cached Components
@@ -109,8 +117,13 @@ public class HUDController : MonoBehaviour
 
     #region Initialization
     private void Awake() {
-        p_ModeInt = 0;
+        if (m_DefaultMode == default(int)) {
+            m_DefaultMode = 0;
+        }
+        p_ModeInt = m_DefaultMode;
         p_ButtonList = new Button[4]{m_MoveButton, m_InspectButton, m_InteractButton, m_InventoryButton};
+
+        buttons = GameObject.FindGameObjectsWithTag("Button");
 
         cc_MoveImage = m_MoveButton.GetComponent<Image>();
         cc_InspectImage = m_InspectButton.GetComponent<Image>();
@@ -123,7 +136,9 @@ public class HUDController : MonoBehaviour
 
     #region Update Methods
     private void Update() {
-        ModeSelect();
+        if (m_CanChange) {
+            ModeSelect();
+        }
     }
     #endregion
 
@@ -195,6 +210,18 @@ public class HUDController : MonoBehaviour
 
     public int GetMode() {
         return p_ModeInt;
+    }
+
+    public void disableButtons() {
+        foreach(var b in buttons) {
+            b.SetActive(false);
+        }
+    }
+
+    public void enableButtons() {
+        foreach (var b in buttons) {
+            b.SetActive(true);
+        }
     }
     #endregion
 }
