@@ -22,6 +22,7 @@ public class NPCController : MonoBehaviour
     public ChainBuilder chain;
     public Checkpoint ckpt;
     public bool talkable;
+    public bool showChildren;
     public GameObject[] force;
 
     [SerializeField]
@@ -95,7 +96,6 @@ public class NPCController : MonoBehaviour
         else if (p_Index >= this.m_Conversation.Length)
         {
             m_HUD.GetComponent<HUDController>().enableButtons();
-
             this.GetComponent<BoxCollider2D>().transform.localScale = ls;
             m_DiaBox.SetActive(false);
             p_Index = -1;
@@ -109,6 +109,11 @@ public class NPCController : MonoBehaviour
             }
             if (chain != null) {
                 chain.Phase();
+            }
+            if (showChildren)
+            {
+                force[0].GetComponent<NPCController>().forceProgression();
+                force[0].GetComponent<NPCController>().shrinkMe();
             }
 
         }

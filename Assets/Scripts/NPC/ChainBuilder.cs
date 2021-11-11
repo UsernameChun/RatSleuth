@@ -25,9 +25,6 @@ public class ChainBuilder : MonoBehaviour
     public void Phase() {
         if (plt.check(myCheckpoint)) {
             before.SetActive(false);
-            for(int i = 0; i < 50000000; i++) {
-
-            }
             after.SetActive(true);
         }
     }
