@@ -174,6 +174,7 @@ public class NPCController : MonoBehaviour
         if (m_IsItem) {
             Inventory.add_to_inventory(this.gameObject.name, 1);
         }
+
     }
     #endregion
 
