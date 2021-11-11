@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System.Runtime.Serialization.Json;
+using System.Text;
+
 
 public class Parser : MonoBehaviour
 {
@@ -24,11 +27,17 @@ public class Parser : MonoBehaviour
         }
     }
     public string parse(int signal, string curScene, int Scene = -1) {
-        JsonToScene deserial = JsonUtility.FromJson<JsonToScene>(Application.dataPath + Path.PathSeparator + "SceneGroupTransitions" + Path.PathSeparator + curScene + ".json");
-        for (int index = 0; index < deserial.signals.Length; index += 1 ) {
-            if (deserial.signals[index] == signal) {
-                return deserial.next_Scene.scene;
+        DataContractJsonSerializer jsonSer = new DataContractJsonSerializer(typeof(JsonToScene));
+        FileStream f = new FileStream(Application.dataPath  + "/SceneGroupTransitions" + "/" + curScene + ".json", FileMode.OpenOrCreate);
+        JsonToScene deserial = null;
+        if (f.Length > 0) {
+            deserial = (JsonToScene) jsonSer.ReadObject(f);
+            for (int index = 0; index < deserial.signals.Length; index += 1 ) {
+                if (deserial.signals[index] == signal) {
+                    return deserial.next_Scene.scene;
+                }
             }
+            return null;
         }
         return null;
     }
