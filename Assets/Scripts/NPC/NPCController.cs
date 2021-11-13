@@ -22,6 +22,7 @@ public class NPCController : MonoBehaviour
     public ChainBuilder chain;
     public Checkpoint ckpt;
     public bool talkable;
+    public bool showChildren;
     public GameObject[] force;
 
     [SerializeField]
@@ -110,6 +111,11 @@ public class NPCController : MonoBehaviour
             if (chain != null) {
                 chain.Phase();
             }
+            if (showChildren)
+            {
+                force[0].GetComponent<NPCController>().forceProgression();
+                force[0].GetComponent<NPCController>().shrinkMe();
+            }
 
         }
         else if (p_HUDController.ModeInt != mode)
@@ -174,6 +180,7 @@ public class NPCController : MonoBehaviour
         if (m_IsItem) {
             Inventory.add_to_inventory(this.gameObject.name, 1);
         }
+
     }
     #endregion
 
