@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Home.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Main.unity
+    guid: 2302f86c2181fb74891abef04822dc79
+  - enabled: 1
+    path: Assets/Scenes/ClosetPuzzle.unity
+    guid: 204d706241050a04493899c9347f7486
+  - enabled: 1
+    path: Assets/Scenes/DummyScene.unity
+    guid: a1aa562cd21ae2146a316c00074a49e2
+  - enabled: 1
+    path: Assets/Scenes/Map.unity
+    guid: 88f6380c3e5652f43874b571a12222b9
   m_configObjects: {}

@@ -487,6 +487,7 @@ GameObject:
   - component: {fileID: 362226517}
   - component: {fileID: 362226516}
   - component: {fileID: 362226515}
+  - component: {fileID: 362226519}
   m_Layer: 5
   m_Name: Sproul
   m_TagString: Untagged
@@ -572,7 +573,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 362226517}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 362226519}
+        m_TargetAssemblyTypeName: SceneSwitch, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &362226517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,6 +624,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362226513}
   m_CullTransparentMesh: 1
+--- !u!114 &362226519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362226513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d15fa2b238d544581b3f422ac89497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: DummyScene
 --- !u!1 &534935401
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,6 +927,7 @@ GameObject:
   - component: {fileID: 753434295}
   - component: {fileID: 753434294}
   - component: {fileID: 753434293}
+  - component: {fileID: 753434297}
   m_Layer: 5
   m_Name: Dwinelle
   m_TagString: Untagged
@@ -986,7 +1013,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 753434295}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 753434297}
+        m_TargetAssemblyTypeName: SceneSwitch, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &753434295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,6 +1064,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753434291}
   m_CullTransparentMesh: 1
+--- !u!114 &753434297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753434291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d15fa2b238d544581b3f422ac89497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: DummyScene
 --- !u!1 &765351328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,6 +1090,7 @@ GameObject:
   - component: {fileID: 765351332}
   - component: {fileID: 765351331}
   - component: {fileID: 765351330}
+  - component: {fileID: 765351334}
   m_Layer: 5
   m_Name: MemStad
   m_TagString: Untagged
@@ -1123,7 +1176,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 765351332}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 765351334}
+        m_TargetAssemblyTypeName: SceneSwitch, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &765351332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1162,6 +1227,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765351328}
   m_CullTransparentMesh: 1
+--- !u!114 &765351334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765351328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d15fa2b238d544581b3f422ac89497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: DummyScene
 --- !u!1 &830355850
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,6 +1253,7 @@ GameObject:
   - component: {fileID: 830355854}
   - component: {fileID: 830355853}
   - component: {fileID: 830355852}
+  - component: {fileID: 830355856}
   m_Layer: 5
   m_Name: Sather
   m_TagString: Untagged
@@ -1260,7 +1339,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 830355854}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 830355856}
+        m_TargetAssemblyTypeName: SceneSwitch, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &830355854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1299,6 +1390,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830355850}
   m_CullTransparentMesh: 1
+--- !u!114 &830355856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830355850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d15fa2b238d544581b3f422ac89497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: DummyScene
 --- !u!1 &843747213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,6 +1550,7 @@ GameObject:
   - component: {fileID: 845977643}
   - component: {fileID: 845977642}
   - component: {fileID: 845977641}
+  - component: {fileID: 845977645}
   m_Layer: 5
   m_Name: Tower
   m_TagString: Untagged
@@ -1531,7 +1636,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 845977643}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 845977645}
+        m_TargetAssemblyTypeName: SceneSwitch, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &845977643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1570,6 +1687,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845977639}
   m_CullTransparentMesh: 1
+--- !u!114 &845977645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845977639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d15fa2b238d544581b3f422ac89497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: DummyScene
 --- !u!1 &1007684349
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,6 +1713,7 @@ GameObject:
   - component: {fileID: 1007684353}
   - component: {fileID: 1007684352}
   - component: {fileID: 1007684351}
+  - component: {fileID: 1007684355}
   m_Layer: 5
   m_Name: Soda
   m_TagString: Untagged
@@ -1668,7 +1799,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1007684353}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1007684355}
+        m_TargetAssemblyTypeName: SceneSwitch, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1007684353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1707,6 +1850,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007684349}
   m_CullTransparentMesh: 1
+--- !u!114 &1007684355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007684349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d15fa2b238d544581b3f422ac89497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: DummyScene
 --- !u!1 &1030224560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,6 +1876,7 @@ GameObject:
   - component: {fileID: 1030224564}
   - component: {fileID: 1030224563}
   - component: {fileID: 1030224562}
+  - component: {fileID: 1030224566}
   m_Layer: 5
   m_Name: Home
   m_TagString: Untagged
@@ -1805,7 +1962,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1030224564}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1030224566}
+        m_TargetAssemblyTypeName: SceneSwitch, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1030224564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1844,6 +2013,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030224560}
   m_CullTransparentMesh: 1
+--- !u!114 &1030224566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030224560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d15fa2b238d544581b3f422ac89497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Main
 --- !u!1 &1240261726
 GameObject:
   m_ObjectHideFlags: 0

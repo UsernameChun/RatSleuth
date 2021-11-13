@@ -62,7 +62,7 @@ public class NPCController : MonoBehaviour
         else {
             mode = 1;
         }
-        ls = this.GetComponent<BoxCollider2D>().transform.localScale;
+        ls = this.GetComponent<Collider2D>().transform.localScale;
     }
 
     private void Awake() {
@@ -75,7 +75,7 @@ public class NPCController : MonoBehaviour
 
         if (!IsTalking() && p_HUDController.ModeInt == mode) {
             init();
-            this.GetComponent<BoxCollider2D>().transform.localScale = new Vector3(5000f, 5000f, 0);
+            this.GetComponent<Collider2D>().transform.localScale = new Vector3(5000f, 5000f, 0);
             ChangeState(true);
             Debug.Log("Disabling buttons" + this.gameObject.name);
             m_HUD.GetComponent<HUDController>().disableButtons();
@@ -96,7 +96,7 @@ public class NPCController : MonoBehaviour
         {
             m_HUD.GetComponent<HUDController>().enableButtons();
 
-            this.GetComponent<BoxCollider2D>().transform.localScale = ls;
+            this.GetComponent<Collider2D>().transform.localScale = ls;
             m_DiaBox.SetActive(false);
             p_Index = -1;
             animator.SetBool("isTalking", false);
@@ -142,13 +142,13 @@ public class NPCController : MonoBehaviour
     }
 
     public void shrinkMe() {
-        this.GetComponent<BoxCollider2D>().transform.localScale = ls;
+        this.GetComponent<Collider2D>().transform.localScale = ls;
     }
 
     public void forceProgression() {
           
         init();
-        this.GetComponent<BoxCollider2D>().transform.localScale = new Vector3(5000f, 5000f, 0);
+        this.GetComponent<Collider2D>().transform.localScale = new Vector3(5000f, 5000f, 0);
         ChangeState(true);
         m_HUD.GetComponent<HUDController>().disableButtons();
         p_Index++;
