@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isMoving", false);
         }
         Vector3 targetPosition;
-        if (Input.GetKeyDown(KeyCode.Mouse1)) {
+        if (Input.GetKeyDown(KeyCode.Mouse0)) {
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             targetPosition.z = 0;
             if (m_HUD.GetComponent<HUDController>().GetMode() == 0) {
