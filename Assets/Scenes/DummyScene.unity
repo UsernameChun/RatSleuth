@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 58847603}
   - component: {fileID: 58847602}
   m_Layer: 5
-  m_Name: LampOff
+  m_Name: Construction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1775,6 +1775,7 @@ MonoBehaviour:
   chain: {fileID: 0}
   ckpt: {fileID: 0}
   talkable: 1
+  showChildren: 0
   force: []
   m_IsItem: 0
 --- !u!114 &794386050
@@ -1804,6 +1805,7 @@ MonoBehaviour:
   chain: {fileID: 0}
   ckpt: {fileID: 0}
   talkable: 0
+  showChildren: 0
   force: []
   m_IsItem: 0
 --- !u!61 &794386051
