@@ -18,6 +18,7 @@ public class NPCController : MonoBehaviour
     [Tooltip("A HUD Controller object to check modes.")]
     private GameObject m_HUD;
 
+    public AudioSource source;
     public Animator animator;
     public ChainBuilder chain;
     public Checkpoint ckpt;
@@ -92,6 +93,11 @@ public class NPCController : MonoBehaviour
             p_Name.color = new Color(0, 0, 0, 1);
             p_Text.text = Liner(p_Index).text;
             p_Text.color = new Color(0, 0, 0, 1);
+
+            if (source != null) {
+                source.Stop();
+                source.PlayOneShot(Liner(p_Index).audio);
+            }
         }
         else if (p_Index >= this.m_Conversation.Length)
         {
@@ -194,5 +200,8 @@ public class NPCController : MonoBehaviour
 
         [SerializeField]
         public string text;
+
+        [SerializeField]
+        public AudioClip audio;
     }
 }

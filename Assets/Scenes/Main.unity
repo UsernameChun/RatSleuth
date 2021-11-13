@@ -473,8 +473,10 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: You should probably answer the phone first.
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 167685272}
   ckpt: {fileID: 0}
@@ -498,8 +500,10 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: It's not much for conversation.
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 167685272}
   ckpt: {fileID: 0}
@@ -634,8 +638,10 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: "It isn\u2019t much for conversation."
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 1545225084686725745}
   ckpt: {fileID: 0}
@@ -659,8 +665,10 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: 'You should probably answer the phone first. '
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 179485922}
   ckpt: {fileID: 0}
@@ -774,8 +782,10 @@ MonoBehaviour:
     name: Narrator
     text: "A decorative lamp from your mother and father\u2019s sleuthing days. It\u2019s
       seen a lot of use, hard work, and countless all-nighters"
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 1575374845}
   animator: {fileID: 673414230}
   chain: {fileID: 183644815}
   ckpt: {fileID: 183644811}
@@ -814,8 +824,10 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: "It isn\u2019t much for conversation."
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 1575374845}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
   ckpt: {fileID: 0}
@@ -935,12 +947,15 @@ MonoBehaviour:
       which despite its sleazy name offers monthly academic peer-reviewed journals
       by the top female-identifying, rat-identifying doctors in the nation\u2026
       But all you really care about are the nifty free samples it comes with. "
+    audio: {fileID: 0}
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: ' Each time you open the filing cabinet, the scent of cheese, chocolate,
       and strong perfume slaps your senses in the face. '
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
   ckpt: {fileID: 0}
@@ -964,8 +979,10 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: It's not much for conversation.
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
   ckpt: {fileID: 0}
@@ -1298,8 +1315,10 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: "You don\u2019t have any calls you need to make."
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 1575374845}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
   ckpt: {fileID: 0}
@@ -1376,8 +1395,10 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: "You don\u2019t have any calls you need to make."
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 1575374845}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
   ckpt: {fileID: 250157744}
@@ -1672,8 +1693,10 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: 'You suppose the dark is more suiting for a rat hole anyways. '
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 294681214}
   ckpt: {fileID: 0}
@@ -1715,8 +1738,10 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: "It isn\u2019t much for conversation."
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
   ckpt: {fileID: 0}
@@ -2724,8 +2749,10 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: You turn on the light of the old lamp.
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 776023946}
   ckpt: {fileID: 0}
@@ -2763,8 +2790,10 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: "It isn\u2019t much for conversation."
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
   ckpt: {fileID: 0}
@@ -3450,8 +3479,10 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: Turn it on?
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 135057723}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 1575374845}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
   ckpt: {fileID: 0}
@@ -3491,8 +3522,10 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: "It isn\u2019t much for conversation."
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 1575374845}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
   ckpt: {fileID: 0}
@@ -4939,8 +4972,10 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: "It isn\u2019t much for conversation."
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 1545225084686725745}
   ckpt: {fileID: 0}
@@ -4974,11 +5009,14 @@ MonoBehaviour:
     text: ' A form of entertainment you use to wind down. Embarrassingly, You always
       miss every shot you throw. Amazingly, you throw them hard enough to pierce
       the metal of your file cabinet. '
+    audio: {fileID: 0}
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: ' You feel simultaneously gratified and humiliated. '
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
   ckpt: {fileID: 0}
@@ -5334,6 +5372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1474476313}
   - component: {fileID: 1474476312}
+  - component: {fileID: 1474476314}
   m_Layer: 0
   m_Name: PlotMaster
   m_TagString: Untagged
@@ -5368,6 +5407,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1474476314
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474476311}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1545844667
 GameObject:
   m_ObjectHideFlags: 0
@@ -5658,6 +5793,7 @@ GameObject:
   - component: {fileID: 1575374843}
   - component: {fileID: 1575374842}
   - component: {fileID: 1575374841}
+  - component: {fileID: 1575374845}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -5770,6 +5906,102 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!82 &1575374845
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575374840}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1670133850
 GameObject:
   m_ObjectHideFlags: 0
@@ -5963,12 +6195,15 @@ MonoBehaviour:
     name: Narrator
     text: "Haven\u2019t you been taught proper manners? You don\u2019t inspect people
       over the phone, you talk to them. "
+    audio: {fileID: 0}
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: 'You have other options outside of the cute little magnifying glass. Maybe
       instead of using your inspection skills, you should just use your words. '
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 1575374845}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
   ckpt: {fileID: 0}
@@ -5992,20 +6227,25 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: You pick up the phone, and start talking to the person behind the line.
+    audio: {fileID: 8300000, guid: 1d9cec26ac99ea342853329a89e67415, type: 3}
   - portrait: {fileID: 21300000, guid: 0e1b26a07b9c8874692be2c34db8a1d4, type: 3}
     name: Rat Sleuth
     text: Yeah? Okay... UC Berkeley, hm? Okay. I'll be right over.
+    audio: {fileID: 8300000, guid: 8c6bd4d4037dd524881a6e2f5f0d8cf3, type: 3}
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: Duty calls, o' valiant Rat Sleuth. It seems the school from down the road
       is in need of your sleuthing...
+    audio: {fileID: 0}
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: Before you embark on your adventure and receive your in-person briefing,
       you need to gather your belongings. The <color=#ff0000>closet</color> over
       there should have everything you need.
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 1575374845}
   animator: {fileID: 673414230}
   chain: {fileID: 1685155677}
   ckpt: {fileID: 1685155680}
@@ -7415,8 +7655,10 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: 'You should probably answer the phone first. '
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 1575374845}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
   ckpt: {fileID: 0}
@@ -7466,8 +7708,10 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: "It isn\u2019t much for conversation."
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  source: {fileID: 1575374845}
   animator: {fileID: 673414230}
   chain: {fileID: 1545225084686725745}
   ckpt: {fileID: 0}
