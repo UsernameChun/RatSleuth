@@ -9,7 +9,7 @@ public class ChainBuilder : MonoBehaviour
 
     public bool isTalkable;
     public bool disableFirst;
-    public PlotMaster plt;
+    private PlotMaster plt;
     public int myCheckpoint;
 
     private void Start() {
@@ -19,7 +19,7 @@ public class ChainBuilder : MonoBehaviour
         else {
             before.SetActive(true);
         }
-
+        plt = PlotMaster.Instance;
         after.SetActive(false);
     }
     public void Phase() {

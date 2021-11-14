@@ -270,9 +270,11 @@ GameObject:
   - component: {fileID: 61941095}
   - component: {fileID: 61941097}
   - component: {fileID: 61941094}
+  - component: {fileID: 61941098}
+  - component: {fileID: 61941099}
   m_Layer: 5
   m_Name: License
-  m_TagString: Untagged
+  m_TagString: Checkpoint2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -309,16 +311,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Conversation:
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: Your trusty sleuthing license. You worked really hard to earn it, and now
       you finally have the chance to use it for something that's actually interesting.
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 2106136920}
   m_HUD: {fileID: 2095047937}
+  source: {fileID: 0}
   animator: {fileID: 167316552}
   chain: {fileID: 0}
   ckpt: {fileID: 0}
   talkable: 0
+  showChildren: 1
   force: []
   m_IsItem: 1
 --- !u!114 &61941095
@@ -385,6 +390,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 97.8875, y: 62.60971}
   m_EdgeRadius: 0
+--- !u!114 &61941098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61941092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe6f7707e8068e4a8e33bacbe43a2f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpoint: {fileID: 0}
+  foundItems: []
+--- !u!114 &61941099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61941092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac2e1d6073687564d8c610233ed9b4c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HUD: {fileID: 2095047938}
 --- !u!1 &70549281
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,6 +430,7 @@ GameObject:
   - component: {fileID: 70549285}
   - component: {fileID: 70549284}
   - component: {fileID: 70549283}
+  - component: {fileID: 70549287}
   m_Layer: 5
   m_Name: Knife
   m_TagString: Untagged
@@ -475,20 +508,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Conversation:
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: It's a really new and shiny butter knife. Considering you don't use butter,
       though, it doesn't seem to be too useful to you.
-  - portrait: {fileID: 0}
+    audio: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: If it were any sharper, you might be able to use it as a self-defense weapon,
       but... it's not.
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 2106136920}
   m_HUD: {fileID: 2095047937}
+  source: {fileID: 0}
   animator: {fileID: 167316552}
   chain: {fileID: 0}
   ckpt: {fileID: 0}
   talkable: 0
+  showChildren: 1
   force: []
   m_IsItem: 0
 --- !u!114 &70549285
@@ -529,6 +566,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70549281}
   m_CullTransparentMesh: 1
+--- !u!114 &70549287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70549281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac2e1d6073687564d8c610233ed9b4c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HUD: {fileID: 2095047938}
 --- !u!1 &167316551
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +627,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &173031281
 GameObject:
@@ -939,50 +989,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561149816}
   m_CullTransparentMesh: 1
---- !u!1 &678678292
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 678678294}
-  - component: {fileID: 678678293}
-  m_Layer: 0
-  m_Name: PlotMaster
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &678678293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678678292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afbd7ebf594af3c42881302a69931e5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkpoints: 0100
---- !u!4 &678678294
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678678292}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.575658, y: 1.083568, z: 720.456}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &683579360
 GameObject:
   m_ObjectHideFlags: 0
@@ -2182,9 +2188,10 @@ GameObject:
   - component: {fileID: 1639329334}
   - component: {fileID: 1639329333}
   - component: {fileID: 1639329332}
+  - component: {fileID: 1639329336}
   m_Layer: 5
   m_Name: Map
-  m_TagString: Untagged
+  m_TagString: Checkpoint2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2261,16 +2268,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Conversation:
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: A nice map of the area around you, including a small section just for UC
       Berkeley. Something tells you this'll be useful, so you take it with you.
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 2106136920}
   m_HUD: {fileID: 2095047937}
+  source: {fileID: 0}
   animator: {fileID: 167316552}
   chain: {fileID: 0}
   ckpt: {fileID: 0}
   talkable: 0
+  showChildren: 1
   force: []
   m_IsItem: 1
 --- !u!114 &1639329334
@@ -2311,6 +2321,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639329330}
   m_CullTransparentMesh: 1
+--- !u!114 &1639329336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639329330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac2e1d6073687564d8c610233ed9b4c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HUD: {fileID: 2095047938}
 --- !u!1 &1678937449
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,6 +2422,7 @@ GameObject:
   - component: {fileID: 1716373329}
   - component: {fileID: 1716373328}
   - component: {fileID: 1716373327}
+  - component: {fileID: 1716373331}
   m_Layer: 5
   m_Name: Funni
   m_TagString: Untagged
@@ -2503,20 +2527,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Conversation:
-  - portrait: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: It's a toy in the likeness of a character from a video game released in
       2018 that suddenly blew up two years later.
-  - portrait: {fileID: 0}
+    audio: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: Something about it seems really suspicious, but you can't quite put your
       finger on what...
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 2106136920}
   m_HUD: {fileID: 2095047937}
+  source: {fileID: 0}
   animator: {fileID: 167316552}
   chain: {fileID: 0}
   ckpt: {fileID: 0}
   talkable: 0
+  showChildren: 1
   force: []
   m_IsItem: 0
 --- !u!114 &1716373329
@@ -2557,6 +2585,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716373325}
   m_CullTransparentMesh: 1
+--- !u!114 &1716373331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716373325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac2e1d6073687564d8c610233ed9b4c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HUD: {fileID: 2095047938}
 --- !u!1 &1717985366
 GameObject:
   m_ObjectHideFlags: 0
@@ -2652,7 +2693,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d9a611eccf0c70a41a879e80391dd4bd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1ecd6eb9ce0454df0ad86d4c88b8d1ba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2756,6 +2797,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1924031545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1924031548}
+  - component: {fileID: 1924031547}
+  - component: {fileID: 1924031546}
+  m_Layer: 0
+  m_Name: PuzzleChecker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1924031546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924031545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9567f4f57e50b394d9a2639cc1720fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 2
+--- !u!114 &1924031547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924031545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe6f7707e8068e4a8e33bacbe43a2f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpoint: {fileID: 1924031546}
+  foundItems:
+  - {fileID: 1639329330}
+  - {fileID: 61941092}
+--- !u!4 &1924031548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924031545}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.7311187, y: 0.25673836, z: -401.87073}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2095047937
 GameObject:
@@ -2896,7 +2998,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fd9d8e886e1312d47b70095cd17008ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1ecd6eb9ce0454df0ad86d4c88b8d1ba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -931,7 +931,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1005011856}
         m_TargetAssemblyTypeName: HUDController, Assembly-CSharp
         m_MethodName: SetMode
         m_Mode: 3
@@ -1765,12 +1765,15 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: I mean... What are you trying to talk to? There's... nothing here.
+    audio: {fileID: 0}
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: If you're bored, you can go back to the Map. Although, to be entirely fair,
       there isn't much you can do from there either.
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 111563523}
   m_HUD: {fileID: 1005011854}
+  source: {fileID: 0}
   animator: {fileID: 1084256598}
   chain: {fileID: 0}
   ckpt: {fileID: 0}
@@ -1795,12 +1798,15 @@ MonoBehaviour:
     name: Narrator
     text: You find yourself in a big yellow room with a big yellow phrase in the
       middle of it.
+    audio: {fileID: 0}
   - portrait: {fileID: 21300000, guid: 0e1b26a07b9c8874692be2c34db8a1d4, type: 3}
     name: Rat Sleuth
     text: Hm. I think this part isn't built yet. Maybe if I check back in a later
       version this might actually be important.
+    audio: {fileID: 0}
   m_DiaBox: {fileID: 111563523}
   m_HUD: {fileID: 1005011854}
+  source: {fileID: 0}
   animator: {fileID: 1084256598}
   chain: {fileID: 0}
   ckpt: {fileID: 0}
@@ -2114,7 +2120,7 @@ GameObject:
   - component: {fileID: 937248124}
   m_Layer: 0
   m_Name: Boundaries
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2577,7 +2583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1224a3d9d4a8a5499a7ab05c0d17f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MoveSpeed: 3
+  m_MoveSpeed: 1
   m_HUD: {fileID: 1005011854}
   wall: 0
   animator: {fileID: 1084256598}
@@ -2758,7 +2764,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1005011856}
         m_TargetAssemblyTypeName: HUDController, Assembly-CSharp
         m_MethodName: SetMode
         m_Mode: 3
@@ -3478,7 +3484,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1005011856}
         m_TargetAssemblyTypeName: HUDController, Assembly-CSharp
         m_MethodName: SetMode
         m_Mode: 3
@@ -3962,7 +3968,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1005011856}
         m_TargetAssemblyTypeName: HUDController, Assembly-CSharp
         m_MethodName: SetMode
         m_Mode: 3

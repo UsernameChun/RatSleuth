@@ -5,7 +5,11 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     public int index;
-    public PlotMaster plt;
+    private PlotMaster plt;
+
+    private void Start() {
+        plt = PlotMaster.Instance;
+    }
 
     public void passCheckpoint() {
         plt.set(true, index);
