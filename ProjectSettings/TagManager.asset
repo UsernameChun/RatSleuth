@@ -12,6 +12,7 @@ TagManager:
   - Button
   - Checkpoint1
   - Checkpoint2
+  - InventoryManager
   layers:
   - Default
   - TransparentFX

@@ -87,6 +87,10 @@ public class HUDController : MonoBehaviour
     [SerializeField]
     [Tooltip("The default mode int in case of puzzles. Defaults to 0.")]
     private int m_DefaultMode;
+
+    [SerializeField]
+    [Tooltip("Spawning in the inventory")]
+    private GameObject m_Inventory;
     #endregion
 
     #region Private Variables
@@ -156,6 +160,7 @@ public class HUDController : MonoBehaviour
         } else if (Input.GetKeyDown("4")) {
             Debug.Log("Mode: Inventory");
             p_ModeInt = 3;
+            
         } else {
             return;
         }
@@ -168,6 +173,10 @@ public class HUDController : MonoBehaviour
             p_ModeInt = i;
         }
         ModeButtonChange();
+    }
+
+    private void OpenInventory() {
+        Instantiate(m_Inventory, new Vector3(8, 8 ,0), Quaternion.identity);
     }
 
     private void ModeButtonChange() {

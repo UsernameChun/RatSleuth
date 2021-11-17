@@ -11,6 +11,10 @@ public class ItemController : MonoBehaviour
     private Convo[] m_Conversation;
 
     [SerializeField]
+    [Tooltip("the GameObject for controlling inventory serialization")]
+    private GameObject m_Inventory;
+
+    [SerializeField]
     [Tooltip("The object to display the conversation in.")]
     private GameObject m_DiaBox;
 
@@ -30,6 +34,8 @@ public class ItemController : MonoBehaviour
     private Text p_Name;
     private Text p_Text;
 
+    private Inventory p_Inventory;
+
     private HUDController p_HUDController;
 
     private string p_ObjectName;
@@ -45,6 +51,7 @@ public class ItemController : MonoBehaviour
         p_Name = m_DiaBox.transform.GetChild(1).gameObject.GetComponent<Text>();
         p_Text = m_DiaBox.transform.GetChild(2).gameObject.GetComponent<Text>();
         p_Index = -1;
+        p_Inventory = m_Inventory.GetComponent<Inventory>();
 
         p_HUDController = m_HUD.GetComponent<HUDController>();
 

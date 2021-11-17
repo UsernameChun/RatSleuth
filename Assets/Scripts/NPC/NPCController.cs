@@ -18,6 +18,10 @@ public class NPCController : MonoBehaviour
     [Tooltip("A HUD Controller object to check modes.")]
     private GameObject m_HUD;
 
+    [SerializeField]
+    [Tooltip("Inventory GameObject")]
+    private GameObject m_Inventory;
+
     public AudioSource source;
     public Animator animator;
     public ChainBuilder chain;
@@ -35,6 +39,8 @@ public class NPCController : MonoBehaviour
     private Image p_Portrait;
     private Text p_Name;
     private Text p_Text;
+
+    private Inventory p_Inventory;
 
     private HUDController p_HUDController;
     #endregion
@@ -57,6 +63,8 @@ public class NPCController : MonoBehaviour
         p_Index = -1;
 
         p_HUDController = m_HUD.GetComponent<HUDController>();
+
+        p_Inventory = m_Inventory.GetComponent<Inventory>();
 
         if (talkable) {
             mode = 2;
@@ -184,7 +192,7 @@ public class NPCController : MonoBehaviour
         m_DiaBox.SetActive(b);
         p_ObjectName = this.gameObject.name;
         if (m_IsItem) {
-            Inventory.add_to_inventory(this.gameObject.name, 1);
+            p_Inventory.add_to_inventory(this.gameObject.name, 1);
         }
 
     }
