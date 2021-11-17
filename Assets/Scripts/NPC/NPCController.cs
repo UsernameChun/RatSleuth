@@ -135,7 +135,10 @@ public class NPCController : MonoBehaviour
                 force[0].GetComponent<NPCController>().forceProgression();
                 force[0].GetComponent<NPCController>().shrinkMe();
             }
-
+            PuzzleShower puzzle = this.GetComponent<PuzzleShower>();
+            if (puzzle != null) {
+                puzzle.ShowPuzzle();
+            }
         }
         else if (p_HUDController.ModeInt != mode)
         {
