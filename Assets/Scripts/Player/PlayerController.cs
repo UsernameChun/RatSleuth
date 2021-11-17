@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
 
     private Coroutine moveCoroutine = null;
 
+    public float Scale;
     public Animator animator;
     public SpriteRenderer render;
     #endregion
@@ -81,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
     #region Movement Methods
     private void ScaleY() {
-        float scale = 1.0f - (0.25f * (transform.position.y + 2.0f));
+        float scale = 1.0f - (Scale * (transform.position.y + 2.0f));
         transform.localScale = new Vector3(scale * p_XScale, scale * p_YScale, 1);
     }
 

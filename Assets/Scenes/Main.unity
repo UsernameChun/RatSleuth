@@ -475,6 +475,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 167685272}
@@ -502,6 +503,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 167685272}
@@ -639,6 +641,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 1545225084686725745}
@@ -666,6 +669,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 179485922}
@@ -783,6 +787,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 183644815}
@@ -824,6 +829,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
@@ -951,6 +957,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
@@ -978,6 +985,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
@@ -1314,6 +1322,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
@@ -1393,6 +1402,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
@@ -1691,6 +1701,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 294681214}
@@ -1735,6 +1746,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
@@ -1791,6 +1803,7 @@ GameObject:
   - component: {fileID: 315947734}
   - component: {fileID: 315947738}
   - component: {fileID: 315947733}
+  - component: {fileID: 315947735}
   m_Layer: 5
   m_Name: Key
   m_TagString: Untagged
@@ -1862,6 +1875,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 1575374845}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
@@ -1870,6 +1884,34 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+--- !u!114 &315947735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315947731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c86ef66bae4c454bb0fc31d5209609d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Conversation:
+  - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
+    name: Narrator
+    text: It's not much for conversation.
+    audio: {fileID: 0}
+  m_DiaBox: {fileID: 1267962587}
+  m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
+  source: {fileID: 1575374845}
+  animator: {fileID: 673414230}
+  chain: {fileID: 0}
+  ckpt: {fileID: 0}
+  talkable: 0
+  showChildren: 0
+  force: []
+  m_IsItem: 1
 --- !u!222 &315947736
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2148,6 +2190,7 @@ MonoBehaviour:
   m_Conversation: []
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 0}
   chain: {fileID: 441624214}
@@ -2618,6 +2661,7 @@ MonoBehaviour:
   m_MoveSpeed: 3
   m_HUD: {fileID: 1306694429}
   wall: 0
+  Scale: 0.25
   animator: {fileID: 673414230}
   render: {fileID: 673414226}
 --- !u!50 &673414229
@@ -2956,6 +3000,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 776023946}
@@ -2996,6 +3041,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
@@ -3684,6 +3730,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 135057723}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
@@ -3726,6 +3773,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
@@ -3977,7 +4025,9 @@ GameObject:
   - component: {fileID: 978080913}
   - component: {fileID: 978080912}
   - component: {fileID: 978080911}
+  - component: {fileID: 978080916}
   - component: {fileID: 978080910}
+  - component: {fileID: 978080915}
   m_Layer: 5
   m_Name: Key (1)
   m_TagString: Untagged
@@ -4058,10 +4108,11 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: 'A small, brass key lies on the ground. You add it to your INVENTORY. '
+    text: You should probably answer the phone first
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 1575374845}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
@@ -4091,6 +4142,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978080908}
   m_CullTransparentMesh: 1
+--- !u!114 &978080915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978080908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c86ef66bae4c454bb0fc31d5209609d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Conversation:
+  - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
+    name: Narrator
+    text: It's not much for conversation.
+    audio: {fileID: 0}
+  m_DiaBox: {fileID: 1267962587}
+  m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
+  source: {fileID: 1575374845}
+  animator: {fileID: 673414230}
+  chain: {fileID: 0}
+  ckpt: {fileID: 0}
+  talkable: 1
+  showChildren: 0
+  force: []
+  m_IsItem: 1
+--- !u!114 &978080916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978080908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f1ef07dfd675674cbaad5f7552f94ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  before: {fileID: 978080908}
+  after: {fileID: 315947731}
+  isTalkable: 0
+  disableFirst: 0
+  myCheckpoint: 1
 --- !u!1 &978613022
 GameObject:
   m_ObjectHideFlags: 0
@@ -5379,6 +5475,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 1545225084686725745}
@@ -5420,6 +5517,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
@@ -6690,6 +6788,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
@@ -6732,6 +6831,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 1575374840}
   source: {fileID: 1575374845}
   animator: {fileID: 673414230}
   chain: {fileID: 1685155677}
@@ -7090,6 +7190,7 @@ GameObject:
   - component: {fileID: 1738207133}
   - component: {fileID: 1738207135}
   - component: {fileID: 1738207134}
+  - component: {fileID: 1738207136}
   m_Layer: 5
   m_Name: Key (2)
   m_TagString: Untagged
@@ -7154,6 +7255,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738207132}
   m_CullTransparentMesh: 1
+--- !u!114 &1738207136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738207132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3fde6b969c71654fb17dc471ffbb22b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toWatch:
+  - {fileID: 978080908}
+  - {fileID: 315947731}
 --- !u!1 &1774890263
 GameObject:
   m_ObjectHideFlags: 0
@@ -8404,6 +8520,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 0}
@@ -8457,6 +8574,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
+  parent: {fileID: 0}
   source: {fileID: 0}
   animator: {fileID: 673414230}
   chain: {fileID: 1545225084686725745}

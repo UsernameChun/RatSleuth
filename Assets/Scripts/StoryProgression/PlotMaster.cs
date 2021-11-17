@@ -31,7 +31,6 @@ public class PlotMaster : MonoBehaviour
     private void skipDialogue(int i) {
         string tag = "Checkpoint" + i;
         var disables = GameObject.FindGameObjectsWithTag(tag);
-        Debug.Log("Found " + disables.Length + " objects to skip");
         foreach(var x in disables){
             x.GetComponent<NPCController>().skipMe();
         }
