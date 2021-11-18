@@ -4,25 +4,22 @@ using UnityEngine;
 
 public class NoTurningBig : MonoBehaviour
 {
-    public GameObject[] toWatch;
+    public int checkpoint;
+    private PlotMaster plt;
 
+    private void Start() {
+        plt = GameObject.FindGameObjectWithTag("plt").GetComponent<PlotMaster>();
+    }
     // Update is called once per frame
     void Update()
     {
-        if (toWatch != null) {
-            bool b = false;
-            foreach(var g in toWatch) {
-                if (g.activeInHierarchy) {
-                    b = true;
-                }
-            }
-            if (!b) {
-                this.gameObject.SetActive(false);
-            }
-            else
-            {
-                this.gameObject.SetActive(true);
-            }
+        if (!plt.checkpoints[checkpoint]) {
+
+            this.gameObject.SetActive(false);
         }
+        else {
+            this.gameObject.SetActive(true);
+        }
+        
     }
 }

@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map.unity
     guid: 88f6380c3e5652f43874b571a12222b9
+  - enabled: 1
+    path: Assets/Scenes/UltraEzBattle.unity
+    guid: e263d81ff4656ab40ace1f2f195b6382
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: cf071bf4dd009b84da0386cd8f9d4991
   m_configObjects: {}
