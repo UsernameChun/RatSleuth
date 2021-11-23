@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public float Scale;
     public Animator animator;
     public SpriteRenderer render;
+    private int health;
     #endregion
 
     #region Cached References
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
     private void Awake() {
         p_XScale = transform.localScale.x;
         p_YScale = transform.localScale.y;
+        health = 6;
     }
     #endregion
 
@@ -94,7 +96,8 @@ public class PlayerController : MonoBehaviour
                 myBody.velocity = Vector3.zero;
             }
             Vector3 vdir = (target - this.gameObject.transform.position).normalized;
-            myBody.velocity =vdir * m_MoveSpeed;
+            
+            myBody.velocity = vdir * m_MoveSpeed;
             ScaleY();
             yield return null;
         }
@@ -106,6 +109,21 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Wall") {
             wall = true;
         }
+    }
+
+    private void takeDamage() {
+        health -= 1;
+        if (health <= 0) {
+            health = 1;
+        }
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setZ(Vector3 v) {
+        this.gameObject.transform.position = v;
     }
     #endregion
 }
