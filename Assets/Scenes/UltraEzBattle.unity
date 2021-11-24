@@ -200,7 +200,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48964114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: -1.01, z: 0}
+  m_LocalPosition: {x: 7.68, y: 0.98, z: 0}
   m_LocalScale: {x: 0.44755185, y: 0.44755185, z: 0.44755185}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1497,9 +1497,9 @@ GameObject:
   - component: {fileID: 673414227}
   - component: {fileID: 673414226}
   - component: {fileID: 673414225}
-  - component: {fileID: 673414228}
   - component: {fileID: 673414229}
   - component: {fileID: 673414230}
+  - component: {fileID: 673414228}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1520,7 +1520,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.33186007, y: -3.8141587}
+  m_Offset: {x: 0.33186007, y: -2.2018502}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1531,7 +1531,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.5689163, y: 1.6356826}
+  m_Size: {x: 4.5689163, y: 4.8602996}
   m_EdgeRadius: 0
 --- !u!212 &673414226
 SpriteRenderer:
@@ -1593,7 +1593,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673414224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.49, y: -3.388, z: 0}
+  m_LocalPosition: {x: 0.78, y: -3.6, z: 0}
   m_LocalScale: {x: 0.26145282, y: 0.26145282, z: 1.3072641}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1614,7 +1614,7 @@ MonoBehaviour:
   m_MoveSpeed: 3
   m_HUD: {fileID: 1306694429}
   wall: 0
-  Scale: 0.15
+  Scale: 0
   animator: {fileID: 673414230}
   render: {fileID: 673414226}
 --- !u!50 &673414229
@@ -1631,7 +1631,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -2757,7 +2757,6 @@ GameObject:
   - component: {fileID: 1262155184}
   - component: {fileID: 1262155183}
   - component: {fileID: 1262155182}
-  - component: {fileID: 1262155185}
   - component: {fileID: 1262155186}
   m_Layer: 0
   m_Name: Hook
@@ -2776,14 +2775,14 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.35, y: 5.35}
+    oldSize: {x: 8.8, y: 12.57}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2866,7 +2865,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c50a3bb5d1d367849bfa180e05c6391a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bfa5b92756d336647be53f39a677025d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2885,33 +2884,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262155181}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6, y: 3.14, z: 0}
-  m_LocalScale: {x: 0.525, y: 0.525, z: 0.525}
+  m_LocalPosition: {x: 0.0903, y: 4.9097, z: 0}
+  m_LocalScale: {x: 0.2576785, y: 0.2576785, z: 0.2576785}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1262155185
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262155181}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &1262155186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2925,8 +2903,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 673414228}
-  Scale: 0.3
-  Frequency: 1
+  Scale: 0.1
+  Frequency: 3
 --- !u!1 &1267962587
 GameObject:
   m_ObjectHideFlags: 0

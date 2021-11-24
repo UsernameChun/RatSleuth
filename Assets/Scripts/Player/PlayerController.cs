@@ -94,9 +94,9 @@ public class PlayerController : MonoBehaviour
         while ((target - this.gameObject.transform.position).magnitude > 0.2 && !wall) {
             if (m_HUD.GetComponent<HUDController>().GetMode() != 0) {
                 myBody.velocity = Vector3.zero;
+                break;
             }
             Vector3 vdir = (target - this.gameObject.transform.position).normalized;
-            
             myBody.velocity = vdir * m_MoveSpeed;
             ScaleY();
             yield return null;
@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void takeDamage() {
+    public void takeDamage() {
         health -= 1;
         if (health <= 0) {
             health = 1;
@@ -120,10 +120,6 @@ public class PlayerController : MonoBehaviour
 
     public int getHealth() {
         return health;
-    }
-
-    public void setZ(Vector3 v) {
-        this.gameObject.transform.position = v;
     }
     #endregion
 }
