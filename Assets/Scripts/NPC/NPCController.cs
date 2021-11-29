@@ -18,6 +18,7 @@ public class NPCController : MonoBehaviour
     [Tooltip("A HUD Controller object to check modes.")]
     private GameObject m_HUD;
 
+    public GameObject parent;
     public AudioSource source;
     public Animator animator;
     public ChainBuilder chain;
@@ -26,6 +27,7 @@ public class NPCController : MonoBehaviour
     public bool showChildren;
     public GameObject[] force;
 
+    private List<GameObject> disabled;
     [SerializeField]
     [Tooltip("Whether or not the item is something that can be picked up.")]
     private bool m_IsItem;
@@ -66,10 +68,12 @@ public class NPCController : MonoBehaviour
             mode = 1;
         }
         ls = this.GetComponent<Collider2D>().transform.localScale;
+        disabled = new List<GameObject>();
     }
 
     private void Awake() {
         init();
+        parent = this.transform.parent.gameObject;
     }
     #endregion
 
@@ -79,6 +83,12 @@ public class NPCController : MonoBehaviour
         if (!IsTalking() && p_HUDController.ModeInt == mode) {
             init();
             this.GetComponent<Collider2D>().transform.localScale = new Vector3(5000f, 5000f, 0);
+            foreach (var c in parent.GetComponentsInChildren<Collider2D>()) {
+                if (c.name != this.gameObject.name) {
+                    c.gameObject.SetActive(false);
+                    disabled.Add(c.gameObject);
+                }
+            }
             ChangeState(true);
             Debug.Log("Disabling buttons" + this.gameObject.name);
             m_HUD.GetComponent<HUDController>().disableButtons();
@@ -108,7 +118,10 @@ public class NPCController : MonoBehaviour
             m_DiaBox.SetActive(false);
             p_Index = -1;
             animator.SetBool("isTalking", false);
-            Debug.Log("Reactivating buttons" + this.gameObject.name);
+            Debug.Log("Reactivating button s" + this.gameObject.name);
+            foreach (var c in disabled) {
+                c.SetActive(true);
+            }
             if (p_ObjectName == this.gameObject.name && m_IsItem) {
                 gameObject.SetActive(false);
             }
@@ -123,7 +136,10 @@ public class NPCController : MonoBehaviour
                 force[0].GetComponent<NPCController>().forceProgression();
                 force[0].GetComponent<NPCController>().shrinkMe();
             }
-
+            PuzzleShower puzzle = this.GetComponent<PuzzleShower>();
+            if (puzzle != null) {
+                puzzle.ShowPuzzle();
+            }
         }
         else if (p_HUDController.ModeInt != mode)
         {
@@ -156,6 +172,8 @@ public class NPCController : MonoBehaviour
 
     public void shrinkMe() {
         this.GetComponent<Collider2D>().transform.localScale = ls;
+
+
     }
 
     public void forceProgression() {
@@ -184,8 +202,9 @@ public class NPCController : MonoBehaviour
     public void ChangeState(bool b) {
         m_DiaBox.SetActive(b);
         p_ObjectName = this.gameObject.name;
-            Debug.Log("adding to inventory");
+        if (m_IsItem) {
             Inventory.inv.add_to_inventory("inv_Key");
+        }
 
     }
     #endregion
