@@ -63,5 +63,18 @@ public class CursorController : MonoBehaviour
     public void changeHover(bool b) {
         this.hover = b;
     }
+
+    public IEnumerator trackCursor(GameObject item) {
+        while (true) {
+            if (Input.GetKeyDown(KeyCode.Escape)) {
+                yield return null;
+            }
+            Vector3 mousePosition = Input.mousePosition;
+            Vector3 newPos = mousePosition;
+            newPos.x -= 10;
+            newPos.y -= 10;
+            item.transform.position = newPos;
+        }
+    }
     #endregion
 }
