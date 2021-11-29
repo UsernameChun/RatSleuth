@@ -15,10 +15,11 @@ public class PopulateInventory : MonoBehaviour
     
 
     public void populate() {
+        //kill all children of the inventory panel, this also kills their spawn objects
         foreach(Transform child in transform) {
             Destroy(child.gameObject);
         }
-
+        //reinstantiate the items
         List<string> itemList = Inventory.inv.get_Inventory();
         foreach (string key in itemList) {
             foreach (GameObject i in itemHolder) {
