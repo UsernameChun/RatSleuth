@@ -12,10 +12,18 @@ public class PopulateInventory : MonoBehaviour
     [SerializeField]
     [Tooltip("this is the transform for the grid")]
     private Transform grid;
+
+    public GameObject selectedItem {
+        get;
+        set;
+    }
     
 
     public void populate() {
         //kill all children of the inventory panel, this also kills their spawn objects
+        if (selectedItem != null) {
+            Destroy(selectedItem);
+        }
         foreach(Transform child in transform) {
             Destroy(child.gameObject);
         }

@@ -15,6 +15,10 @@ public class SceneSwitch : MonoBehaviour
     private string item;
 
     [SerializeField]
+    [Tooltip("the selected item name")]
+    private string selItem;
+
+    [SerializeField]
     [Tooltip("The inventory panel")]
     private GameObject inv_Panel;
 
@@ -25,14 +29,16 @@ public class SceneSwitch : MonoBehaviour
 
     #region Scene Methods
     public void Switch() {
-        if (Inventory.inv.get_Inventory().Contains(item)) {
+        if (m_Switch){
+        SceneManager.LoadScene(name);
+        }
+        else if (inv_Panel.GetComponent<PopulateInventory>().selectedItem != null && 
+            inv_Panel.GetComponent<PopulateInventory>().selectedItem.name == selItem) {
         Inventory.inv.remove_from_inventory(item); //update db
         inv_Panel.GetComponent<PopulateInventory>().populate(); //reorganize the inventory
         SceneManager.LoadScene(name);
-        } else if (m_Switch){
-        inv_Panel.GetComponent<PopulateInventory>().populate(); //reorganize the inventory
-        SceneManager.LoadScene(name);
-        } else {
+        }
+         else {
             Debug.Log("no such item and m_switch is off");
         }
     }

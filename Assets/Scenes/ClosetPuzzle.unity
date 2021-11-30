@@ -2591,6 +2591,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Main
+  item: 
+  inv_Panel: {fileID: 0}
+  m_Switch: 1
 --- !u!1 &1639329330
 GameObject:
   m_ObjectHideFlags: 0
@@ -3264,11 +3267,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef85676e05ba04448d18f1d0eb36bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ButtonManager: {fileID: 0}
   m_MoveButton: {fileID: 712613386}
   m_InspectButton: {fileID: 17210724}
   m_InteractButton: {fileID: 1081689471}
   m_InventoryButton: {fileID: 1717985367}
   m_MoveIcon: {fileID: 21300000, guid: d95ca1150d67c1243b7e5aa87059bade, type: 3}
+  m_Parent: {fileID: 0}
   m_InspectIcon: {fileID: 21300000, guid: 5e43c671763dd5b4995be1b05354a452, type: 3}
   m_InteractIcon: {fileID: 21300000, guid: 85a101c596e491847aac2464495c052d, type: 3}
   m_InventoryIcon: {fileID: 21300000, guid: d9a611eccf0c70a41a879e80391dd4bd, type: 3}
@@ -3276,10 +3281,10 @@ MonoBehaviour:
   m_InspectHighlight: {fileID: 21300000, guid: 5807f4173a933524a81bfedc0a7134b6, type: 3}
   m_InteractHighlight: {fileID: 21300000, guid: 0a3b8f909824d3f49aa7d7849a01b159, type: 3}
   m_InventoryHighlight: {fileID: 21300000, guid: fd28081f007f05f4cae1eee4ee098a69, type: 3}
-  inv: {fileID: 0}
   m_ModeSelectColor: {r: 1, g: 0.9638567, b: 0.3433962, a: 1}
   m_CanChange: 0
   m_DefaultMode: 1
+  m_Inventory: {fileID: 0}
 --- !u!4 &2095047940
 Transform:
   m_ObjectHideFlags: 0

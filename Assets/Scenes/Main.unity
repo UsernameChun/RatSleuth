@@ -354,7 +354,7 @@ RectTransform:
   - {fileID: 1847066005}
   - {fileID: 952848197}
   m_Father: {fileID: 1545844668}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -418,7 +418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &158785587
 RectTransform:
   m_ObjectHideFlags: 0
@@ -431,12 +431,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1545844668}
-  m_RootOrder: 11
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -17}
-  m_SizeDelta: {x: 339.6345, y: 183.05}
+  m_AnchoredPosition: {x: -73, y: 60}
+  m_SizeDelta: {x: 263.3401, y: 145.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &158785588
 MonoBehaviour:
@@ -2480,7 +2480,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1545844668}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3369,11 +3369,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1545844668}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 304.51, y: -0.000005722}
+  m_AnchoredPosition: {x: 304.51, y: -0}
   m_SizeDelta: {x: 190.9772, y: 313.3627}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &707232435
@@ -3390,6 +3390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: ClosetPuzzle
   item: inv_Key
+  selItem: keyFollow(Clone)
   inv_Panel: {fileID: 158785586}
   m_Switch: 0
 --- !u!114 &707232436
@@ -6094,7 +6095,7 @@ RectTransform:
   m_Children:
   - {fileID: 1665024588}
   m_Father: {fileID: 1545844668}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6418,7 +6419,7 @@ RectTransform:
   - {fileID: 1320171681}
   - {fileID: 468789233}
   m_Father: {fileID: 1545844668}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -7321,6 +7322,7 @@ RectTransform:
   - {fileID: 290979816}
   - {fileID: 66213608}
   - {fileID: 1061320321}
+  - {fileID: 158785587}
   - {fileID: 1670133854}
   - {fileID: 1943683868}
   - {fileID: 1267962588}
@@ -7329,7 +7331,6 @@ RectTransform:
   - {fileID: 441624213}
   - {fileID: 1721297275}
   - {fileID: 1211914415}
-  - {fileID: 158785587}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8096,7 +8097,7 @@ RectTransform:
   - {fileID: 626536826}
   - {fileID: 1774890264}
   m_Father: {fileID: 1545844668}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -8408,7 +8409,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1545844668}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8442,6 +8443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Map
   item: 
+  selItem: 
   inv_Panel: {fileID: 0}
   m_Switch: 0
 --- !u!61 &1721297278
@@ -9232,7 +9234,7 @@ RectTransform:
   - {fileID: 228825523}
   - {fileID: 904017865}
   m_Father: {fileID: 1545844668}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}

@@ -16,15 +16,8 @@ public class ButtonManager : MonoBehaviour
         Debug.Log("item pressed");
         GameObject inv_Panel = gameObject.transform.parent.gameObject; //get the parent
         Debug.Log("spawning item");
-        spawnedItem = Instantiate(SpawnItem, inv_Panel.transform.parent, false);
+        inv_Panel.GetComponent<PopulateInventory>().selectedItem = Instantiate(SpawnItem, inv_Panel.transform.parent, false);
         inv_Panel.SetActive(false); //disable the item press
-    }
-
-    public void OnDestroy() {
-        if (spawnedItem != null) {
-            Destroy(spawnedItem);
-        }
-        Destroy(gameObject);
     }
 
 }
