@@ -7,9 +7,6 @@ public class HUDController : MonoBehaviour
 {
     #region Editor Variables
     [SerializeField]
-    [Tooltip("manager so that we can destroy all the spawned items when switching modes")]
-    private GameObject m_ButtonManager;
-    [SerializeField]
     [Tooltip("Move mode button.")]
     private Button m_MoveButton;
 

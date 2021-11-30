@@ -31,6 +31,10 @@ public class NPCController : MonoBehaviour
     [SerializeField]
     [Tooltip("Whether or not the item is something that can be picked up.")]
     private bool m_IsItem;
+
+    [SerializeField]
+    [Tooltip("what item to add to the inventory, needs to be the prefab name")]
+    private string m_ItemName;
     #endregion
 
     #region Cached Components  
@@ -203,9 +207,8 @@ public class NPCController : MonoBehaviour
         m_DiaBox.SetActive(b);
         p_ObjectName = this.gameObject.name;
         if (m_IsItem) {
-            Inventory.inv.add_to_inventory("inv_Key");
+            Inventory.inv.add_to_inventory(m_ItemName);
         }
-
     }
     #endregion
 

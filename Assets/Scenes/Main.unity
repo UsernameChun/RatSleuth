@@ -600,6 +600,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!114 &167685274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -628,6 +629,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!60 &167685275
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -788,6 +790,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!114 &179485925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -816,6 +819,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!61 &179485926
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -935,6 +939,7 @@ MonoBehaviour:
   force:
   - {fileID: 941218640}
   m_IsItem: 0
+  m_ItemName: 
 --- !u!114 &183644811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -976,6 +981,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!61 &183644813
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1181,6 +1187,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!114 &193719017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1209,6 +1216,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!114 &193719018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1598,6 +1606,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!61 &250157742
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1678,6 +1687,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!222 &250157746
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2012,6 +2022,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!114 &294681214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2057,6 +2068,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!61 &294681216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2187,6 +2199,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!114 &315947735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2215,6 +2228,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 1
+  m_ItemName: 
 --- !u!222 &315947736
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2528,6 +2542,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!61 &441624216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3645,6 +3660,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!114 &776023942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3686,6 +3702,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!61 &776023944
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4065,6 +4082,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!114 &831579972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4093,6 +4111,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!1 &852177175
 GameObject:
   m_ObjectHideFlags: 0
@@ -4653,6 +4672,7 @@ MonoBehaviour:
   - {fileID: 776023938}
   - {fileID: 294681210}
   m_IsItem: 0
+  m_ItemName: 
 --- !u!114 &941218643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4694,6 +4714,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!61 &941218645
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5033,6 +5054,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 1
+  m_ItemName: inv_Key
 --- !u!114 &978080913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5082,6 +5104,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 1
+  m_ItemName: 
 --- !u!114 &978080916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6720,6 +6743,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!222 &1276035298
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6762,6 +6786,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!61 &1276035300
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6818,7 +6843,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef85676e05ba04448d18f1d0eb36bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ButtonManager: {fileID: 0}
   m_MoveButton: {fileID: 290979819}
   m_InspectButton: {fileID: 66213611}
   m_InteractButton: {fileID: 1061320324}
@@ -7289,6 +7313,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!1 &1545844667
 GameObject:
   m_ObjectHideFlags: 0
@@ -8180,6 +8205,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!114 &1685155676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8222,7 +8248,8 @@ MonoBehaviour:
   talkable: 1
   showChildren: 0
   force: []
-  m_IsItem: 1
+  m_IsItem: 0
+  m_ItemName: 
 --- !u!114 &1685155677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9961,6 +9988,7 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
 --- !u!61 &4806949500898707622
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10015,3 +10043,4 @@ MonoBehaviour:
   showChildren: 0
   force: []
   m_IsItem: 0
+  m_ItemName: 
