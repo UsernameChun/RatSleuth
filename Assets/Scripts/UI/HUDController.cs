@@ -7,6 +7,9 @@ public class HUDController : MonoBehaviour
 {
     #region Editor Variables
     [SerializeField]
+    [Tooltip("manager so that we can destroy all the spawned items when switching modes")]
+    private GameObject m_ButtonManager;
+    [SerializeField]
     [Tooltip("Move mode button.")]
     private Button m_MoveButton;
 
@@ -25,6 +28,10 @@ public class HUDController : MonoBehaviour
     [SerializeField]
     [Tooltip("Normal move icon.")]
     private Sprite m_MoveIcon;
+
+    [SerializeField]
+    [Tooltip("HUD parent object Transform")]
+    private Transform m_Parent;
 
     [SerializeField]
     [Tooltip("Normal inspect icon.")]
@@ -54,7 +61,6 @@ public class HUDController : MonoBehaviour
     [Tooltip("Highlighted inventory icon.")]
     private Sprite m_InventoryHighlight;
 
-    public GameObject inv;
 
     // [SerializeField]
     // [Tooltip("Move mode cursor.")]
@@ -87,6 +93,11 @@ public class HUDController : MonoBehaviour
     [SerializeField]
     [Tooltip("The default mode int in case of puzzles. Defaults to 0.")]
     private int m_DefaultMode;
+
+    [SerializeField]
+    [Tooltip("Spawning in the inventory")]
+    private GameObject m_Inventory;
+
     #endregion
 
     #region Private Variables
@@ -156,6 +167,7 @@ public class HUDController : MonoBehaviour
         } else if (Input.GetKeyDown("4")) {
             Debug.Log("Mode: Inventory");
             p_ModeInt = 3;
+            
         } else {
             return;
         }
@@ -170,27 +182,39 @@ public class HUDController : MonoBehaviour
         ModeButtonChange();
     }
 
+    private void OpenInventory() {
+        m_Inventory.GetComponentInChildren<PopulateInventory>().populate();
+        m_Inventory.SetActive(true);
+    }
+
     private void ModeButtonChange() {
         cc_MoveImage.sprite = m_MoveIcon;
         cc_InspectImage.sprite = m_InspectIcon;
         cc_InteractImage.sprite = m_InteractIcon;
         cc_InventoryImage.sprite = m_InventoryIcon;
+        
         switch (p_ModeInt) {
             case 0:
                 cc_MoveImage.sprite = m_MoveHighlight;
+                if (m_Inventory.activeSelf) {
+                    m_Inventory.SetActive(true);
+                }
                 break;
             case 1:
                 cc_InspectImage.sprite = m_InspectHighlight;
+                if (m_Inventory.activeSelf) {
+                    m_Inventory.SetActive(false);
+                }
                 break;
             case 2:
                 cc_InteractImage.sprite = m_InteractHighlight;
+                if (m_Inventory.activeSelf) {
+                    m_Inventory.SetActive(false);
+                }
                 break;
             case 3:
-                if (inv != null)
-                {
-                    inv.SetActive(true);
-                }
                 cc_InventoryImage.sprite = m_InventoryHighlight;
+                OpenInventory();
                 break;
             default:
                 p_ModeInt = 0;
