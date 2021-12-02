@@ -25,14 +25,15 @@ public class SceneSwitch : MonoBehaviour
 
     #region Scene Methods
     public void Switch() {
-        if (Inventory.inv.get_Inventory().Contains(item)) {
-        Inventory.inv.remove_from_inventory(item); //update db
+        if (m_Switch){
         inv_Panel.GetComponent<PopulateInventory>().populate(); //reorganize the inventory
         SceneManager.LoadScene(name);
-        } else if (m_Switch){
-        inv_Panel.GetComponent<PopulateInventory>().populate(); //reorganize the inventory
-        SceneManager.LoadScene(name);
-        } else {
+        } else if (Inventory.inv.get_Inventory().Contains(item)) {
+            Inventory.inv.remove_from_inventory(item); //update db
+            inv_Panel.GetComponent<PopulateInventory>().populate(); //reorganize the inventory
+            SceneManager.LoadScene(name);
+        }
+        else {
             Debug.Log("no such item and m_switch is off");
         }
     }

@@ -184,8 +184,8 @@ public class NPCController : MonoBehaviour
     public void ChangeState(bool b) {
         m_DiaBox.SetActive(b);
         p_ObjectName = this.gameObject.name;
-            Debug.Log("adding to inventory");
-            Inventory.inv.add_to_inventory("inv_Key");
+        Debug.Log("adding to inventory");
+        //Inventory.inv.add_to_inventory("inv_Key");
 
     }
     #endregion
