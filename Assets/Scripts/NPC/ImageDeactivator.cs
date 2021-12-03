@@ -6,10 +6,18 @@ public class ImageDeactivator : MonoBehaviour
 {
     [SerializeField]
     [Tooltip("The collider that the image is associated with.")]
-    private GameObject m_Collider;
+    private GameObject[] m_Colliders;
 
     void Update() {
-        if (!m_Collider.activeInHierarchy) {
+        bool allDisabled = true;
+
+        foreach (var game in m_Colliders) {
+            if (game.activeInHierarchy) {
+                allDisabled = false;
+            }
+        }
+
+        if (allDisabled) {
             this.gameObject.SetActive(false);
         }
     }
