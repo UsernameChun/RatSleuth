@@ -501,7 +501,7 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: It's not much for conversation
+    text: It's not much for conversation.
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
@@ -655,7 +655,7 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: It's not much for conversation
+    text: It's not much for conversation.
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
@@ -1613,12 +1613,8 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: "Important documents are methodically organized within the filing cabinet.
-      Ongoing cases, solved cases, suspect information, loose change, crushed, month-old,
-      cheese-coated chocolates, and the latest edition of \u201CRatbabes Monthly\u201D,
-      which despite its sleazy name offers monthly academic peer-reviewed journals
-      by the top female-identifying, rat-identifying doctors in the nation\u2026
-      But all you really care about are the nifty free samples it comes with. "
+    text: It's a large wooden closet. Something tells you there's important stuff
+      in there... Maybe you should crack it open and take a peek.
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
@@ -2910,7 +2906,7 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: It's not much for conversation
+    text: It's not much for conversation.
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
@@ -3812,7 +3808,7 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: It's not much for conversation
+    text: It's not much for conversation.
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
@@ -3966,7 +3962,7 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: It's not much for conversation
+    text: It's not much for conversation.
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
@@ -4503,7 +4499,7 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: It's not much for conversation
+    text: It's not much for conversation.
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
@@ -4532,7 +4528,7 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: You should probably answer the phone first
+    text: You should probably answer the phone first.
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
@@ -4816,7 +4812,7 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: It's not much for conversation
+    text: It's not much for conversation.
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
@@ -6219,7 +6215,7 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: It's not much for conversation
+    text: It's not much for conversation.
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
@@ -6516,7 +6512,7 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: It's not much for conversation
+    text: It's not much for conversation.
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
@@ -6929,13 +6925,13 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: ' A form of entertainment you use to wind down. Embarrassingly, You always
+    text: 'A form of entertainment you use to wind down. Embarrassingly, You always
       miss every shot you throw. Amazingly, you throw them hard enough to pierce
       the metal of your file cabinet. '
     audio: {fileID: 0}
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: ' You feel simultaneously gratified and humiliated. '
+    text: 'You feel simultaneously gratified and humiliated. '
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
@@ -7022,7 +7018,6 @@ MonoBehaviour:
   m_ModeSelectColor: {r: 1, g: 0.9638567, b: 0.3433962, a: 1}
   m_CanChange: 1
   m_DefaultMode: 0
-  m_Inventory: {fileID: 158785586}
 --- !u!4 &1306694431
 Transform:
   m_ObjectHideFlags: 0
@@ -7418,7 +7413,7 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: It's not much for conversation
+    text: It's not much for conversation.
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
@@ -7447,7 +7442,7 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: You should probably answer the phone first
+    text: You should probably answer the phone first.
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
@@ -7572,7 +7567,7 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: It's not much for conversation
+    text: It's not much for conversation.
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
@@ -8235,7 +8230,7 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: " It looks like a box filled with various important files, but it\u2019s
+    text: "It looks like a box filled with various important files, but it\u2019s
       actually just a cardboard cutout of a cardboard box filled with files. "
     audio: {fileID: 0}
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
@@ -9066,17 +9061,23 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: " Your old desk you got off the street for free in a more than dubious
-      neighborhood. Coffee stains, ink stains, blood stains, scratch marks, burn
-      marks, and stretch marks all somehow adorn it, giving it a distinct\u2026 Personality\u2026
-      But hey, you\u2019re on a budget, and you can\u2019t say no to a price like
-      that! "
+    text: Your old desk you got off the street for free in a more than dubious neighborhood.
     audio: {fileID: 0}
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: "The more you look at your desk\u2019s various scuffs and stains, the more
-      you start to see things\u2026 Clouds, butterflies, and vague outlines of numerous
-      biblical figures. "
+    text: "Coffee stains, ink stains, blood stains, scratch marks, burn marks, and
+      stretch marks all somehow adorn it, giving it a distinct\u2026 personality."
+    audio: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
+    name: Narrator
+    text: "But hey, you\u2019re on a budget, and you can\u2019t say no to a price
+      like that! "
+    audio: {fileID: 0}
+  - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
+    name: Narrator
+    text: "You take a closer look. The more you look at your desk\u2019s various
+      scuffs and stains, the more you start to see things\u2026 Clouds, butterflies,
+      and vague outlines of numerous biblical figures. "
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1943683867}
   m_HUD: {fileID: 1306694429}
@@ -9528,7 +9529,7 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: It's not much for conversation
+    text: It's not much for conversation.
     audio: {fileID: 0}
   m_DiaBox: {fileID: 1267962587}
   m_HUD: {fileID: 1306694429}
