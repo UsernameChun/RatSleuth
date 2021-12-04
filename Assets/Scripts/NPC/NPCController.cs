@@ -71,7 +71,7 @@ public class NPCController : MonoBehaviour
             mode = 1;
         }
         ls = this.GetComponent<Collider2D>().transform.localScale;
-
+        parent = this.gameObject.transform.parent.gameObject;
         disabled = new List<GameObject>();
     }
 
