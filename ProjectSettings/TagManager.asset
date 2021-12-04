@@ -17,6 +17,7 @@ TagManager:
   - InventoryManager
   - Checkpoint11
   - KeepActive
+  - Checkpoint5
   layers:
   - Default
   - TransparentFX
