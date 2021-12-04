@@ -24,6 +24,8 @@ public class NPCController : MonoBehaviour
     public Checkpoint ckpt;
     public bool talkable;
     public bool showChildren;
+    public GameObject parent;
+    private List<GameObject> disabled;
     public GameObject[] force;
 
     [SerializeField]
@@ -35,7 +37,6 @@ public class NPCController : MonoBehaviour
     private Image p_Portrait;
     private Text p_Name;
     private Text p_Text;
-
 
     private HUDController p_HUDController;
     #endregion
@@ -66,9 +67,12 @@ public class NPCController : MonoBehaviour
             mode = 1;
         }
         ls = this.GetComponent<Collider2D>().transform.localScale;
+
+        disabled = new List<GameObject>();
     }
 
     private void Awake() {
+        parent = this.transform.parent.gameObject;
         init();
     }
     #endregion
@@ -82,6 +86,12 @@ public class NPCController : MonoBehaviour
             ChangeState(true);
             Debug.Log("Disabling buttons" + this.gameObject.name);
             m_HUD.GetComponent<HUDController>().disableButtons();
+            foreach (var c in parent.GetComponentsInChildren<Collider2D>()) {
+                if (c.name != this.gameObject.name) {
+                    c.gameObject.SetActive(false);
+                    disabled.Add(c.gameObject);
+                }
+            }
         }
 
         if (p_HUDController.ModeInt == mode) {
@@ -109,6 +119,9 @@ public class NPCController : MonoBehaviour
             p_Index = -1;
             animator.SetBool("isTalking", false);
             Debug.Log("Reactivating buttons" + this.gameObject.name);
+            foreach (var c in disabled) {
+                c.SetActive(true);
+            }
             if (p_ObjectName == this.gameObject.name && m_IsItem) {
                 gameObject.SetActive(false);
             }
@@ -159,7 +172,6 @@ public class NPCController : MonoBehaviour
     }
 
     public void forceProgression() {
-          
         init();
         this.GetComponent<Collider2D>().transform.localScale = new Vector3(5000f, 5000f, 0);
         ChangeState(true);
@@ -184,9 +196,8 @@ public class NPCController : MonoBehaviour
     public void ChangeState(bool b) {
         m_DiaBox.SetActive(b);
         p_ObjectName = this.gameObject.name;
-        Debug.Log("adding to inventory");
-        //Inventory.inv.add_to_inventory("inv_Key");
-
+        // Debug.Log("adding to inventory");
+        // Inventory.inv.add_to_inventory("inv_Key");
     }
     #endregion
 
