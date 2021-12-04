@@ -94,10 +94,6 @@ public class HUDController : MonoBehaviour
     [Tooltip("The default mode int in case of puzzles. Defaults to 0.")]
     private int m_DefaultMode;
 
-    [SerializeField]
-    [Tooltip("Spawning in the inventory")]
-    private GameObject m_Inventory;
-
     #endregion
 
     #region Private Variables
@@ -182,11 +178,7 @@ public class HUDController : MonoBehaviour
         ModeButtonChange();
     }
 
-    private void OpenInventory() {
-        m_Inventory.GetComponentInChildren<PopulateInventory>().populate();
-        m_Inventory.SetActive(true);
-    }
-
+   
     private void ModeButtonChange() {
         cc_MoveImage.sprite = m_MoveIcon;
         cc_InspectImage.sprite = m_InspectIcon;
@@ -196,25 +188,18 @@ public class HUDController : MonoBehaviour
         switch (p_ModeInt) {
             case 0:
                 cc_MoveImage.sprite = m_MoveHighlight;
-                if (m_Inventory.activeSelf) {
-                    m_Inventory.SetActive(true);
-                }
+
                 break;
             case 1:
                 cc_InspectImage.sprite = m_InspectHighlight;
-                if (m_Inventory.activeSelf) {
-                    m_Inventory.SetActive(false);
-                }
+
                 break;
             case 2:
                 cc_InteractImage.sprite = m_InteractHighlight;
-                if (m_Inventory.activeSelf) {
-                    m_Inventory.SetActive(false);
-                }
+
                 break;
             case 3:
-                cc_InventoryImage.sprite = m_InventoryHighlight;
-                OpenInventory();
+
                 break;
             default:
                 p_ModeInt = 0;

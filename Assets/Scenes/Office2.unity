@@ -481,8 +481,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &167685274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -508,8 +510,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 1
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &167685275
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -645,8 +649,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 1
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &179485925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -672,8 +678,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &179485926
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -789,9 +797,11 @@ MonoBehaviour:
   ckpt: {fileID: 183644811}
   talkable: 0
   showChildren: 1
+  parent: {fileID: 0}
   force:
   - {fileID: 941218640}
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &183644811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,8 +840,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 1
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &183644813
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -957,8 +969,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &193719017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -984,8 +998,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 1
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &193719018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1082,7 +1098,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 10510314c7c9ade40bacb4f508c5f4ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cfea70e8d48fa42a3b2f0c7effe5d027, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1320,8 +1336,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &250157742
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1399,8 +1417,10 @@ MonoBehaviour:
   ckpt: {fileID: 250157744}
   talkable: 1
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!222 &250157746
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1697,8 +1717,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &294681214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1741,8 +1763,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 1
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &294681216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1868,8 +1892,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!222 &315947736
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2154,8 +2180,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &441624216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2713,7 +2741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d15fa2b238d544581b3f422ac89497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: ClosetPuzzle
+  m_SceneName: 
 --- !u!114 &707232436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2963,8 +2991,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &776023942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3003,8 +3033,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 1
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &776023944
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3507,6 +3539,7 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: But, hey, you're on a budget, and you can't say no to a deal like that!
+  m_Inventory: {fileID: 0}
   m_DiaBox: {fileID: 0}
   m_HUD: {fileID: 1306694429}
   animator: {fileID: 673414230}
@@ -3677,10 +3710,12 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 0
+  parent: {fileID: 0}
   force:
   - {fileID: 776023938}
   - {fileID: 294681210}
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &941218643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3719,8 +3754,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 1
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &941218645
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4055,8 +4092,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 1
+  m_Puzzle: {fileID: 0}
 --- !u!114 &978080913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4141,6 +4180,7 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: But now begins your first <i>human</i> case!
+  m_Inventory: {fileID: 0}
   m_DiaBox: {fileID: 0}
   m_HUD: {fileID: 1306694429}
   animator: {fileID: 673414230}
@@ -4679,6 +4719,7 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: You should probably answer the phone first
+  m_Inventory: {fileID: 0}
   m_DiaBox: {fileID: 0}
   m_HUD: {fileID: 1306694429}
   animator: {fileID: 673414230}
@@ -4932,6 +4973,7 @@ MonoBehaviour:
     name: Narrator
     text: Just looking at it makes you want to dive into its warm embrace and fall
       asleep.
+  m_Inventory: {fileID: 0}
   m_DiaBox: {fileID: 0}
   m_HUD: {fileID: 1306694429}
   animator: {fileID: 673414230}
@@ -5184,6 +5226,7 @@ MonoBehaviour:
     name: Narrator
     text: Except for your dart throws. It still doesn't make sense how you do that.
       Poor file cabinet.
+  m_Inventory: {fileID: 0}
   m_DiaBox: {fileID: 0}
   m_HUD: {fileID: 1306694429}
   animator: {fileID: 673414230}
@@ -5372,8 +5415,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 1
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!222 &1276035298
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5413,8 +5458,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &1276035300
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5471,11 +5518,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef85676e05ba04448d18f1d0eb36bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ButtonManager: {fileID: 0}
   m_MoveButton: {fileID: 290979819}
   m_InspectButton: {fileID: 66213611}
   m_InteractButton: {fileID: 1061320324}
   m_InventoryButton: {fileID: 1670133851}
   m_MoveIcon: {fileID: 21300000, guid: d95ca1150d67c1243b7e5aa87059bade, type: 3}
+  m_Parent: {fileID: 0}
   m_InspectIcon: {fileID: 21300000, guid: 5e43c671763dd5b4995be1b05354a452, type: 3}
   m_InteractIcon: {fileID: 21300000, guid: 85a101c596e491847aac2464495c052d, type: 3}
   m_InventoryIcon: {fileID: 21300000, guid: d9a611eccf0c70a41a879e80391dd4bd, type: 3}
@@ -5483,7 +5532,6 @@ MonoBehaviour:
   m_InspectHighlight: {fileID: 21300000, guid: 5807f4173a933524a81bfedc0a7134b6, type: 3}
   m_InteractHighlight: {fileID: 21300000, guid: 0a3b8f909824d3f49aa7d7849a01b159, type: 3}
   m_InventoryHighlight: {fileID: 21300000, guid: fd28081f007f05f4cae1eee4ee098a69, type: 3}
-  inv: {fileID: 0}
   m_ModeSelectColor: {r: 1, g: 0.9638567, b: 0.3433962, a: 1}
   m_CanChange: 1
   m_DefaultMode: 0
@@ -6048,6 +6096,7 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: 1de1bcf1cd1dc914e91d094170cdc040, type: 3}
     name: Rat Sleuth
     text: Man, I miss them.
+  m_Inventory: {fileID: 0}
   m_DiaBox: {fileID: 0}
   m_HUD: {fileID: 1306694429}
   animator: {fileID: 673414230}
@@ -6172,7 +6221,7 @@ GameObject:
   - component: {fileID: 1575374841}
   - component: {fileID: 1575374845}
   m_Layer: 5
-  m_Name: Background
+  m_Name: NOT USED IN FINAL BUILD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6683,8 +6732,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &1685155676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6725,8 +6776,10 @@ MonoBehaviour:
   ckpt: {fileID: 1685155680}
   talkable: 1
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &1685155677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6945,7 +6998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d15fa2b238d544581b3f422ac89497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Map
+  m_SceneName: 
 --- !u!61 &1721297278
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7533,6 +7586,7 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: Just one of the quirky things about living underground! ... Ugh.
+  m_Inventory: {fileID: 0}
   m_DiaBox: {fileID: 0}
   m_HUD: {fileID: 1306694429}
   animator: {fileID: 673414230}
@@ -7788,6 +7842,7 @@ MonoBehaviour:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
     text: Where... did you even get that one from?
+  m_Inventory: {fileID: 0}
   m_DiaBox: {fileID: 0}
   m_HUD: {fileID: 1306694429}
   animator: {fileID: 673414230}
@@ -7962,6 +8017,7 @@ MonoBehaviour:
     text: You wonder what an offroad office chair would be like, and consider the
       purchase of one. Then, you remember that flooring might just be the better
       alternative here.
+  m_Inventory: {fileID: 0}
   m_DiaBox: {fileID: 0}
   m_HUD: {fileID: 1306694429}
   animator: {fileID: 673414230}
@@ -8232,6 +8288,7 @@ MonoBehaviour:
     name: Narrator
     text: But all you really care about are the abundance of free samples that they
       always seem to come with.
+  m_Inventory: {fileID: 0}
   m_DiaBox: {fileID: 0}
   m_HUD: {fileID: 1306694429}
   animator: {fileID: 673414230}
@@ -8397,8 +8454,10 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &4806949500898707622
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8450,5 +8509,7 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 1
   showChildren: 0
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
