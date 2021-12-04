@@ -15,19 +15,25 @@ public class SceneSwitch : MonoBehaviour
     private string item;
 
     [SerializeField]
-    [Tooltip("The inventory panel")]
-    private GameObject inv_Panel;
-
-    [SerializeField]
     [Tooltip("switch scenes without consuming item")]
     private bool m_Switch;
+    #endregion
+
+    #region Cached References
+    private Inventory inv_Panel;
+    #endregion
+
+    #region Initialization Methods
+    public void Start() {
+        inv_Panel = Inventory.inv;
+    }
     #endregion
 
     #region Scene Methods
     public void Switch() {
         if (m_Switch){
-        inv_Panel.GetComponent<PopulateInventory>().populate(); //reorganize the inventory
-        SceneManager.LoadScene(name);
+            inv_Panel.GetComponent<PopulateInventory>().populate(); //reorganize the inventory
+            SceneManager.LoadScene(name);
         } else if (Inventory.inv.get_Inventory().Contains(item)) {
             Inventory.inv.remove_from_inventory(item); //update db
             inv_Panel.GetComponent<PopulateInventory>().populate(); //reorganize the inventory
