@@ -3776,7 +3776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   before: {fileID: 682103020}
-  after: {fileID: 2084758074}
+  after: {fileID: 682584127}
   isTalkable: 0
   disableFirst: 0
   myCheckpoint: 1
