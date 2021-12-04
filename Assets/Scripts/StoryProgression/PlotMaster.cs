@@ -35,12 +35,8 @@ public class PlotMaster : MonoBehaviour
             return;
         }
         foreach(var x in disables){
-            if (x.GetComponent<NPCController>() != null) {
-
-                x.GetComponent<NPCController>().skipMe();
-            } else {
-                x.gameObject.SetActive(false);
-            }
+            x.GetComponent<NPCController>().skipMe();
+            
         }
     }
 
