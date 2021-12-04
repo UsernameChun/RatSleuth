@@ -17,7 +17,11 @@ TagManager:
   - InventoryManager
   - Checkpoint11
   - KeepActive
+<<<<<<< HEAD
+  - Checkpoint12
+=======
   - Checkpoint5
+>>>>>>> a91f621132d87e679bc10a000cc0576cf4ed53e6
   layers:
   - Default
   - TransparentFX

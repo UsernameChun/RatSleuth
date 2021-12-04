@@ -326,6 +326,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 1
+  m_Puzzle: {fileID: 0}
 --- !u!60 &61941095
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -515,10 +516,11 @@ MonoBehaviour:
   chain: {fileID: 0}
   ckpt: {fileID: 0}
   talkable: 0
-  showChildren: 1
+  showChildren: 0
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!222 &127718438
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -672,6 +674,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173031281}
   m_CullTransparentMesh: 1
+--- !u!1 &282624322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 282624325}
+  - component: {fileID: 282624324}
+  - component: {fileID: 282624323}
+  m_Layer: 0
+  m_Name: PreDummy
+  m_TagString: Checkpoint2
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &282624323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282624322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f1ef07dfd675674cbaad5f7552f94ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  before: {fileID: 282624322}
+  after: {fileID: 534104158}
+  isTalkable: 0
+  disableFirst: 1
+  myCheckpoint: 2
+--- !u!114 &282624324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282624322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c86ef66bae4c454bb0fc31d5209609d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Conversation: []
+  m_DiaBox: {fileID: 2106136920}
+  m_HUD: {fileID: 2095047937}
+  source: {fileID: 0}
+  animator: {fileID: 167316552}
+  chain: {fileID: 282624323}
+  ckpt: {fileID: 0}
+  talkable: 0
+  showChildren: 0
+  parent: {fileID: 0}
+  force: []
+  m_IsItem: 0
+  m_Puzzle: {fileID: 0}
+--- !u!4 &282624325
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282624322}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.6210399, y: 32.44362, z: -30212.387}
+  m_LocalScale: {x: 45, y: 45, z: 45}
+  m_Children: []
+  m_Father: {fileID: 906054986}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &296266747
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +757,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 296266748}
-  - component: {fileID: 296266749}
   m_Layer: 5
   m_Name: MapParent
   m_TagString: KeepActive
@@ -710,20 +785,6 @@ RectTransform:
   m_AnchoredPosition: {x: -194, y: 99}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &296266749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 296266747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6023d9a912339db499d407163162f07f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Colliders:
-  - {fileID: 1639329330}
 --- !u!1 &410616513
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,7 +1004,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.8374357, y: 0.22839165}
@@ -1003,10 +1064,11 @@ MonoBehaviour:
   chain: {fileID: 0}
   ckpt: {fileID: 0}
   talkable: 0
-  showChildren: 1
+  showChildren: 0
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!222 &529423162
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1015,6 +1077,126 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529423157}
   m_CullTransparentMesh: 1
+--- !u!1 &534104158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 534104163}
+  - component: {fileID: 534104162}
+  - component: {fileID: 534104161}
+  - component: {fileID: 534104160}
+  - component: {fileID: 534104159}
+  m_Layer: 0
+  m_Name: CompleteText
+  m_TagString: Checkpoint12
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &534104159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534104158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f1ef07dfd675674cbaad5f7552f94ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  before: {fileID: 534104158}
+  after: {fileID: 871797831}
+  isTalkable: 0
+  disableFirst: 0
+  myCheckpoint: 12
+--- !u!114 &534104160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534104158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9567f4f57e50b394d9a2639cc1720fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 12
+--- !u!114 &534104161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534104158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c86ef66bae4c454bb0fc31d5209609d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Conversation:
+  - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
+    name: Narrator
+    text: Now that you have your sleuthing license and map in hand, you can finally
+      <color="ff0000">leave your house</color> and start your case!
+    audio: {fileID: 0}
+  m_DiaBox: {fileID: 2106136920}
+  m_HUD: {fileID: 2095047937}
+  source: {fileID: 0}
+  animator: {fileID: 167316552}
+  chain: {fileID: 534104159}
+  ckpt: {fileID: 534104160}
+  talkable: 0
+  showChildren: 1
+  parent: {fileID: 0}
+  force: []
+  m_IsItem: 0
+  m_Puzzle: {fileID: 0}
+--- !u!61 &534104162
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534104158}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2200, y: 2200}
+  m_EdgeRadius: 0
+--- !u!4 &534104163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534104158}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 436.5}
+  m_LocalScale: {x: 45, y: 45, z: 45}
+  m_Children: []
+  m_Father: {fileID: 906054986}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &561149816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1439,6 +1621,7 @@ GameObject:
   - component: {fileID: 813863589}
   - component: {fileID: 813863591}
   - component: {fileID: 813863590}
+  - component: {fileID: 813863592}
   m_Layer: 5
   m_Name: LicenseImg
   m_TagString: Untagged
@@ -1503,6 +1686,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813863588}
   m_CullTransparentMesh: 1
+--- !u!114 &813863592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813863588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6023d9a912339db499d407163162f07f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Collider: {fileID: 61941092}
+  m_DiaBox: {fileID: 2106136920}
 --- !u!1 &845865569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,6 +1711,7 @@ GameObject:
   - component: {fileID: 845865570}
   - component: {fileID: 845865572}
   - component: {fileID: 845865571}
+  - component: {fileID: 845865573}
   m_Layer: 5
   m_Name: MapImg
   m_TagString: Untagged
@@ -1578,6 +1776,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845865569}
   m_CullTransparentMesh: 1
+--- !u!114 &845865573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845865569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6023d9a912339db499d407163162f07f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Collider: {fileID: 1639329330}
+  m_DiaBox: {fileID: 2106136920}
+--- !u!1 &871797831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 871797832}
+  m_Layer: 0
+  m_Name: Dummy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &871797832
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871797831}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.6210399, y: 32.44362, z: -30212.387}
+  m_LocalScale: {x: 45, y: 45, z: 45}
+  m_Children: []
+  m_Father: {fileID: 906054986}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &873766755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,10 +1928,11 @@ MonoBehaviour:
   chain: {fileID: 0}
   ckpt: {fileID: 0}
   talkable: 0
-  showChildren: 1
+  showChildren: 0
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!222 &873766760
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1797,6 +2040,9 @@ RectTransform:
   - {fileID: 1090275557}
   - {fileID: 127718434}
   - {fileID: 529423158}
+  - {fileID: 282624325}
+  - {fileID: 534104163}
+  - {fileID: 871797832}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1948,7 +2194,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1083824999}
-  - component: {fileID: 1083825000}
   m_Layer: 5
   m_Name: LicenseParent
   m_TagString: KeepActive
@@ -1977,20 +2222,6 @@ RectTransform:
   m_AnchoredPosition: {x: 50, y: -201}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1083825000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1083824998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6023d9a912339db499d407163162f07f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Colliders:
-  - {fileID: 61941092}
 --- !u!1 &1090275556
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,10 +2320,11 @@ MonoBehaviour:
   chain: {fileID: 0}
   ckpt: {fileID: 0}
   talkable: 0
-  showChildren: 1
+  showChildren: 0
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!222 &1090275561
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2815,6 +3047,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 1
+  m_Puzzle: {fileID: 0}
 --- !u!222 &1639329335
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3036,10 +3269,11 @@ MonoBehaviour:
   chain: {fileID: 0}
   ckpt: {fileID: 0}
   talkable: 0
-  showChildren: 1
+  showChildren: 0
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!222 &1716373330
 CanvasRenderer:
   m_ObjectHideFlags: 0
