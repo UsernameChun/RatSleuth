@@ -25,7 +25,7 @@ public class NPCController : MonoBehaviour
     public bool talkable;
     public bool showChildren;
     public GameObject parent;
-    private List<GameObject> disabled;
+    public List<GameObject> disabled;
     public GameObject[] force;
 
     [SerializeField]
@@ -141,6 +141,10 @@ public class NPCController : MonoBehaviour
             if (showChildren)
             {
                 force[0].GetComponent<NPCController>().forceProgression();
+                force[0].GetComponent<NPCController>().disabled = this.disabled;
+                foreach (var c in disabled) {
+                    c.SetActive(false);
+                }
                 force[0].GetComponent<NPCController>().shrinkMe();
             }
 
@@ -176,6 +180,12 @@ public class NPCController : MonoBehaviour
 
     public void shrinkMe() {
         this.GetComponent<Collider2D>().transform.localScale = ls;
+    }
+
+    public void runItBack() {
+        foreach (var c in disabled) {
+            c.SetActive(true);
+        }
     }
 
     public void forceProgression() {
