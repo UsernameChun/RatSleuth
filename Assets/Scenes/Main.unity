@@ -136,9 +136,10 @@ GameObject:
   - component: {fileID: 29322178}
   - component: {fileID: 29322177}
   - component: {fileID: 29322176}
+  - component: {fileID: 29322180}
   m_Layer: 5
   m_Name: Closet (2)
-  m_TagString: Untagged
+  m_TagString: Checkpoint3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -234,6 +235,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 551429621}
 --- !u!114 &29322179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,13 +257,31 @@ MonoBehaviour:
   m_HUD: {fileID: 1306694429}
   source: {fileID: 0}
   animator: {fileID: 673414230}
-  chain: {fileID: 0}
+  chain: {fileID: 29322180}
   ckpt: {fileID: 0}
   talkable: 1
   showChildren: 0
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
+--- !u!114 &29322180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29322174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f1ef07dfd675674cbaad5f7552f94ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  before: {fileID: 29322174}
+  after: {fileID: 2084758074}
+  isTalkable: 0
+  disableFirst: 0
+  myCheckpoint: 3
 --- !u!1 &66213607
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,6 +514,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &67286130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,6 +543,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &67286131
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -646,6 +668,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &109676799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -674,6 +697,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &109676800
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -860,6 +884,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &147689892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -893,6 +918,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &147689893
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1120,6 +1146,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &167685274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1148,6 +1175,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &167685275
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1286,6 +1314,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &179485925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1314,6 +1343,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &179485926
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1433,6 +1463,7 @@ MonoBehaviour:
   force:
   - {fileID: 941218640}
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &183644811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1474,6 +1505,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &183644813
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1487,7 +1519,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016500607, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1599,6 +1631,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &193719017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1627,6 +1660,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &193719018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1986,6 +2020,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &249963997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2022,6 +2057,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &249963998
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2136,6 +2172,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &250157742
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2216,6 +2253,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!222 &250157746
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2515,6 +2553,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &294681214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2560,6 +2599,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &294681216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2573,7 +2613,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016500607, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2848,6 +2888,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &415081778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2876,6 +2917,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &415081779
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2981,6 +3023,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &441624216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3171,6 +3214,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &551429621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5634459373786480417, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+  m_PrefabInstance: {fileID: 642238530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &551429622 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+  m_PrefabInstance: {fileID: 642238530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &551429623 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5634459373786480419, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+  m_PrefabInstance: {fileID: 642238530}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551429621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9567f4f57e50b394d9a2639cc1720fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &551429624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551429621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f48a76410e4f43e48aa4a5b994230d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &551429625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551429621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b072a5adb1a6f4c97bbdd38b0c1f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Checkpoint: {fileID: 551429623}
 --- !u!1 &558678640
 GameObject:
   m_ObjectHideFlags: 0
@@ -3315,6 +3404,123 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626536825}
   m_CullTransparentMesh: 1
+--- !u!1001 &642238530
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1575374844}
+    m_Modifications:
+    - target: {fileID: 5634459373786480417, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_Name
+      value: KeypadPuzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480417, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_RootOrder
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00034332275
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.002746582
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000015258789
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480418, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634459373786480420, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
+      propertyPath: after
+      value: 
+      objectReference: {fileID: 707232433}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 066810de28cd96f4c9da4d206cfcf07c, type: 3}
 --- !u!1 &673414224
 GameObject:
   m_ObjectHideFlags: 0
@@ -3584,6 +3790,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &682103025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3612,6 +3819,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &682103026
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3736,6 +3944,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &682584132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3772,6 +3981,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &682584133
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3896,6 +4106,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &696487428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3924,6 +4135,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &696487429
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3986,8 +4198,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 313.28, y: -6.3}
-  m_SizeDelta: {x: 121.4051, y: 256.7281}
+  m_AnchoredPosition: {x: 312.2, y: -25.75329}
+  m_SizeDelta: {x: 175.6, y: 345.9026}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &707232435
 MonoBehaviour:
@@ -4001,10 +4213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d15fa2b238d544581b3f422ac89497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: ClosetPuzzle
-  item: inv_Key
-  inv_Panel: {fileID: 158785586}
-  m_Switch: 0
+  m_SceneName: ClosetPuzzle
 --- !u!114 &707232436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4074,14 +4283,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.019607844}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 52a77dc7f6327e84893f7714c5f45183, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ef7588114c0f4214086c7f5251b0e809, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4272,6 +4481,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &767436629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4300,6 +4510,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &767436630
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4409,6 +4620,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &776023942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4450,6 +4662,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &776023944
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4463,7 +4676,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016500607, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4581,6 +4794,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &778887632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4616,6 +4830,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &778887633
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4964,6 +5179,151 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.7680664, y: 2.8706055}
   m_EdgeRadius: 0
+--- !u!1 &896647466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 896647467}
+  - component: {fileID: 896647471}
+  - component: {fileID: 896647470}
+  - component: {fileID: 896647469}
+  - component: {fileID: 896647468}
+  m_Layer: 5
+  m_Name: BackButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &896647467
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896647466}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 551429622}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -145, y: 30}
+  m_SizeDelta: {x: 60, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &896647468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896647466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b5c267a1a6e9754b9fc2a518e96ed68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &896647469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896647466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 896647470}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 896647468}
+        m_TargetAssemblyTypeName: DeactivateKeypad, Assembly-CSharp
+        m_MethodName: DeactivateIt
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &896647470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896647466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 52a77dc7f6327e84893f7714c5f45183, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &896647471
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896647466}
+  m_CullTransparentMesh: 1
 --- !u!1 &904017864
 GameObject:
   m_ObjectHideFlags: 0
@@ -5125,6 +5485,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &928444569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5160,6 +5521,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &928444570
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5251,6 +5613,7 @@ MonoBehaviour:
   - {fileID: 776023938}
   - {fileID: 294681210}
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &941218643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5292,6 +5655,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &941218645
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5305,7 +5669,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016500607, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5833,6 +6197,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &1090902594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5861,6 +6226,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &1090902595
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6128,6 +6494,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &1181393130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6166,6 +6533,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &1181393131
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6502,6 +6870,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!222 &1276035298
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6544,6 +6913,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &1276035300
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7026,6 +7396,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &1481198802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7054,6 +7425,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &1481198803
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7178,6 +7550,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &1489970296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7206,6 +7579,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &1489970297
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7330,6 +7704,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &1514251301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7358,6 +7733,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &1514251302
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7621,6 +7997,8 @@ RectTransform:
   - {fileID: 249963999}
   - {fileID: 1489970292}
   - {fileID: 1632515758}
+  - {fileID: 551429622}
+  - {fileID: 2084758075}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7805,6 +8183,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &1632515761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7839,6 +8218,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &1632515762
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8170,6 +8550,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &1685155676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8213,6 +8594,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &1685155677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8431,10 +8813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d15fa2b238d544581b3f422ac89497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Map
-  item: 
-  inv_Panel: {fileID: 158785586}
-  m_Switch: 1
+  m_SceneName: 
 --- !u!61 &1721297278
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8635,6 +9014,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &1770826200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8673,6 +9053,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &1770826201
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9124,6 +9505,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &1860256204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9152,6 +9534,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &1860256205
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9258,6 +9641,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!114 &1888999040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9290,6 +9674,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &1888999041
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9437,6 +9822,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943683867}
   m_CullTransparentMesh: 1
+--- !u!1 &2084758074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2084758075}
+  m_Layer: 5
+  m_Name: Dummy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2084758075
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084758074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1575374844}
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2114307055
 GameObject:
   m_ObjectHideFlags: 0
@@ -9590,6 +10010,7 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}
 --- !u!61 &4806949500898707622
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9603,7 +10024,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016500607, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -9644,3 +10065,4 @@ MonoBehaviour:
   parent: {fileID: 0}
   force: []
   m_IsItem: 0
+  m_Puzzle: {fileID: 0}

@@ -31,6 +31,10 @@ public class NPCController : MonoBehaviour
     [SerializeField]
     [Tooltip("Whether or not the item is something that can be picked up.")]
     private bool m_IsItem;
+
+    [SerializeField]
+    [Tooltip("The puzzle to show after finishing this conversation.")]
+    private GameObject m_Puzzle;
     #endregion
 
     #region Cached Components  
@@ -87,7 +91,7 @@ public class NPCController : MonoBehaviour
             Debug.Log("Disabling buttons" + this.gameObject.name);
             m_HUD.GetComponent<HUDController>().disableButtons();
             foreach (var c in parent.GetComponentsInChildren<Collider2D>()) {
-                if (c.name != this.gameObject.name) {
+                if (c.name != this.gameObject.name && !c.gameObject.CompareTag("KeepActive")) {
                     c.gameObject.SetActive(false);
                     disabled.Add(c.gameObject);
                 }
@@ -130,6 +134,9 @@ public class NPCController : MonoBehaviour
             }
             if (chain != null) {
                 chain.Phase();
+            }
+            if (m_Puzzle != null) {
+                m_Puzzle.SetActive(true);
             }
             if (showChildren)
             {
