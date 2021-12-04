@@ -257,8 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 723255113}
-  toWrite: Through Rat Sleuth's heroism, Berkeley is now safe from the villainous
-    Kiwibot
+  toWrite: And so, our hero embarks on his next great adventure. More to come!
   time: 10
 --- !u!114 &723255113
 MonoBehaviour:
@@ -273,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.43629918, g: 0.9528302, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -281,7 +280,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 1bf8045ec3c777b47a2d6aa6c23c9498, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
@@ -460,7 +459,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 20f4f5c2b0720bf4b97528c634e7be86, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5c1b6380c4d9d804abc0a3d890d09310, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

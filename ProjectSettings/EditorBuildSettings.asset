@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/UltraEzBattle.unity
     guid: e263d81ff4656ab40ace1f2f195b6382
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Victory.unity
     guid: cf071bf4dd009b84da0386cd8f9d4991
   - enabled: 1
@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Office1.unity
     guid: 9539586600368ce48a041c1da86797de
+  - enabled: 1
+    path: Assets/Scenes/SlidePuzzle.unity
+    guid: 6ff0848f956edb64fa20b64c910e9f59
   m_configObjects: {}
