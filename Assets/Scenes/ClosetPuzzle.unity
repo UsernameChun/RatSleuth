@@ -323,6 +323,7 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 1
+  parent: {fileID: 0}
   force: []
   m_IsItem: 1
 --- !u!60 &61941095
@@ -515,6 +516,7 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 1
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
 --- !u!222 &127718438
@@ -1002,6 +1004,7 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 1
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
 --- !u!222 &529423162
@@ -1684,6 +1687,7 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 1
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
 --- !u!222 &873766760
@@ -2086,6 +2090,7 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 1
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
 --- !u!222 &1090275561
@@ -2725,9 +2730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d15fa2b238d544581b3f422ac89497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Main
-  item: 
-  m_Switch: 0
+  m_SceneName: Main
 --- !u!1 &1639329330
 GameObject:
   m_ObjectHideFlags: 0
@@ -2809,6 +2812,7 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 1
+  parent: {fileID: 0}
   force: []
   m_IsItem: 1
 --- !u!222 &1639329335
@@ -3033,6 +3037,7 @@ MonoBehaviour:
   ckpt: {fileID: 0}
   talkable: 0
   showChildren: 1
+  parent: {fileID: 0}
   force: []
   m_IsItem: 0
 --- !u!222 &1716373330
