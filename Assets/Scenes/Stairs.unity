@@ -503,6 +503,7 @@ MonoBehaviour:
   talkable: 1
   showChildren: 0
   parent: {fileID: 0}
+  disabled: []
   force: []
   m_IsItem: 0
   m_Puzzle: {fileID: 0}
@@ -532,6 +533,7 @@ MonoBehaviour:
   talkable: 0
   showChildren: 0
   parent: {fileID: 0}
+  disabled: []
   force:
   - {fileID: 1907254798}
   - {fileID: 0}
@@ -1122,6 +1124,7 @@ MonoBehaviour:
   talkable: 0
   showChildren: 0
   parent: {fileID: 0}
+  disabled: []
   force: []
   m_IsItem: 0
   m_Puzzle: {fileID: 0}
@@ -1168,6 +1171,7 @@ MonoBehaviour:
   talkable: 1
   showChildren: 0
   parent: {fileID: 0}
+  disabled: []
   force: []
   m_IsItem: 0
   m_Puzzle: {fileID: 0}
@@ -1693,6 +1697,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 122373360}
+        m_TargetAssemblyTypeName: NPCController, Assembly-CSharp
+        m_MethodName: runItBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &463657222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1945,6 +1961,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 122373360}
+        m_TargetAssemblyTypeName: NPCController, Assembly-CSharp
+        m_MethodName: runItBack
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3515,6 +3543,7 @@ MonoBehaviour:
   talkable: 1
   showChildren: 0
   parent: {fileID: 0}
+  disabled: []
   force: []
   m_IsItem: 0
   m_Puzzle: {fileID: 0}
@@ -3552,6 +3581,7 @@ MonoBehaviour:
   talkable: 0
   showChildren: 1
   parent: {fileID: 0}
+  disabled: []
   force:
   - {fileID: 122373355}
   m_IsItem: 0
@@ -4103,6 +4133,7 @@ MonoBehaviour:
   talkable: 1
   showChildren: 0
   parent: {fileID: 0}
+  disabled: []
   force: []
   m_IsItem: 0
   m_Puzzle: {fileID: 0}
@@ -4140,6 +4171,7 @@ MonoBehaviour:
   talkable: 0
   showChildren: 0
   parent: {fileID: 0}
+  disabled: []
   force: []
   m_IsItem: 0
   m_Puzzle: {fileID: 0}
@@ -4807,6 +4839,7 @@ MonoBehaviour:
   talkable: 1
   showChildren: 0
   parent: {fileID: 0}
+  disabled: []
   force: []
   m_IsItem: 0
   m_Puzzle: {fileID: 0}
@@ -4825,10 +4858,6 @@ MonoBehaviour:
   m_Conversation:
   - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
     name: Narrator
-    text: Your fist easily breaks through the vase.
-    audio: {fileID: 0}
-  - portrait: {fileID: 21300000, guid: c984626a341f50a4aa710925020da58b, type: 3}
-    name: Narrator
     text: "You launch a punch at the vase, and its pieces scatter everywhere\u2026
       You notice a key was inside of it, and naturally pocket it."
     audio: {fileID: 0}
@@ -4845,6 +4874,7 @@ MonoBehaviour:
   talkable: 0
   showChildren: 0
   parent: {fileID: 0}
+  disabled: []
   force: []
   m_IsItem: 0
   m_Puzzle: {fileID: 0}
@@ -5037,6 +5067,7 @@ MonoBehaviour:
   talkable: 1
   showChildren: 0
   parent: {fileID: 0}
+  disabled: []
   force: []
   m_IsItem: 0
   m_Puzzle: {fileID: 0}
@@ -5070,6 +5101,7 @@ MonoBehaviour:
   talkable: 0
   showChildren: 0
   parent: {fileID: 0}
+  disabled: []
   force: []
   m_IsItem: 0
   m_Puzzle: {fileID: 0}
