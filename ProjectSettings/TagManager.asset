@@ -3,25 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Wall
-  - Checkpoint0
-  - TalkBox
-  - InspectBox
-  - Inventory
-  - Button
-  - Checkpoint1
-  - Checkpoint2
-  - Checkpoint3
-  - Checkpoint4
-  - InventoryManager
-  - Checkpoint11
-  - KeepActive
-<<<<<<< HEAD
-  - Checkpoint12
-=======
-  - Checkpoint5
->>>>>>> a91f621132d87e679bc10a000cc0576cf4ed53e6
+  tags: []
   layers:
   - Default
   - TransparentFX
